@@ -5,7 +5,8 @@
     "journal": "Tagebuch",
     "mirror": "Elementspiegel",
     "progress": "Fortschritt",
-    "steps": "Stufen"
+    "steps": "Stufen",
+    "settings": "Einstellungen"
   },
   "auth": {
     "login": "Anmelden",

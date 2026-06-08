@@ -5,7 +5,8 @@
     "journal": "Diario",
     "mirror": "Espejo Elemental",
     "progress": "Progreso",
-    "steps": "Pasos"
+    "steps": "Pasos",
+    "settings": "Configuración"
   },
   "auth": {
     "login": "Iniciar sesión",

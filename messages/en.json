@@ -5,7 +5,8 @@
     "journal": "Journal",
     "mirror": "Element Mirror",
     "progress": "Progress",
-    "steps": "Steps"
+    "steps": "Steps",
+    "settings": "Settings"
   },
   "auth": {
     "login": "Login",

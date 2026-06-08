@@ -5,7 +5,8 @@
     "journal": "Napló",
     "mirror": "Elem-tükör",
     "progress": "Haladás",
-    "steps": "Fokozatok"
+    "steps": "Fokozatok",
+    "settings": "Beállítások"
   },
   "auth": {
     "login": "Bejelentkezés",

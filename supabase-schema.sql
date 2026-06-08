@@ -84,6 +84,28 @@ CREATE TABLE IF NOT EXISTS practice_sessions (
   track        TEXT CHECK (track IN ('spirit', 'soul', 'body'))
 );
 
+-- Push értesítési beállítások
+CREATE TABLE IF NOT EXISTS notification_settings (
+  user_id               UUID REFERENCES auth.users(id) ON DELETE CASCADE PRIMARY KEY,
+  enabled               BOOLEAN DEFAULT false,
+  morning_enabled       BOOLEAN DEFAULT true,
+  morning_time          TEXT DEFAULT '08:00',
+  evening_enabled       BOOLEAN DEFAULT true,
+  evening_time          TEXT DEFAULT '20:00',
+  timezone              TEXT DEFAULT 'Europe/Budapest',
+  morning_notified_date DATE,
+  evening_notified_date DATE,
+  updated_at            TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Push előfizetések (Web Push API subscription object)
+CREATE TABLE IF NOT EXISTS push_subscriptions (
+  id           UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id      UUID REFERENCES auth.users(id) ON DELETE CASCADE UNIQUE NOT NULL,
+  subscription JSONB NOT NULL,
+  created_at   TIMESTAMPTZ DEFAULT NOW()
+);
+
 -- Szekvenciális gyakorlat feloldások
 CREATE TABLE IF NOT EXISTS practice_unlocks (
   id           UUID DEFAULT gen_random_uuid() PRIMARY KEY,
@@ -102,7 +124,9 @@ ALTER TABLE daily_logs        ENABLE ROW LEVEL SECURITY;
 ALTER TABLE journal_entries   ENABLE ROW LEVEL SECURITY;
 ALTER TABLE element_mirror_traits ENABLE ROW LEVEL SECURITY;
 ALTER TABLE practice_sessions ENABLE ROW LEVEL SECURITY;
-ALTER TABLE practice_unlocks  ENABLE ROW LEVEL SECURITY;
+ALTER TABLE practice_unlocks         ENABLE ROW LEVEL SECURITY;
+ALTER TABLE notification_settings    ENABLE ROW LEVEL SECURITY;
+ALTER TABLE push_subscriptions       ENABLE ROW LEVEL SECURITY;
 
 -- Töröljük a régi policy-kat, ha lennének (idempotens újrafuttatáshoz)
 DROP POLICY IF EXISTS "own_step_progress"        ON step_progress;
@@ -110,7 +134,9 @@ DROP POLICY IF EXISTS "own_daily_logs"           ON daily_logs;
 DROP POLICY IF EXISTS "own_journal_entries"      ON journal_entries;
 DROP POLICY IF EXISTS "own_element_mirror_traits" ON element_mirror_traits;
 DROP POLICY IF EXISTS "own_practice_sessions"    ON practice_sessions;
-DROP POLICY IF EXISTS "own_practice_unlocks"    ON practice_unlocks;
+DROP POLICY IF EXISTS "own_practice_unlocks"      ON practice_unlocks;
+DROP POLICY IF EXISTS "own_notification_settings" ON notification_settings;
+DROP POLICY IF EXISTS "own_push_subscriptions"    ON push_subscriptions;
 
 CREATE POLICY "own_step_progress"
   ON step_progress FOR ALL
@@ -142,6 +168,16 @@ CREATE POLICY "own_practice_unlocks"
   USING (auth.uid() = user_id)
   WITH CHECK (auth.uid() = user_id);
 
+CREATE POLICY "own_notification_settings"
+  ON notification_settings FOR ALL
+  USING (auth.uid() = user_id)
+  WITH CHECK (auth.uid() = user_id);
+
+CREATE POLICY "own_push_subscriptions"
+  ON push_subscriptions FOR ALL
+  USING (auth.uid() = user_id)
+  WITH CHECK (auth.uid() = user_id);
+
 -- ============================================================
 -- 4. JOGOSULTSÁGOK (authenticated role)
 -- ============================================================
@@ -152,6 +188,8 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.journal_entries       TO au
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.element_mirror_traits TO authenticated;
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.practice_sessions     TO authenticated;
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.practice_unlocks      TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.notification_settings TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.push_subscriptions    TO authenticated;
 
 -- ============================================================
 -- 5. INDEXEK
