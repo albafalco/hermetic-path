@@ -118,29 +118,21 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           {children}
         </main>
 
-        {/* Bottom nav - Mobile */}
+        {/* Bottom nav - Mobile (max 5 item hogy elférjen) */}
         <nav className="fixed bottom-0 left-0 right-0 md:hidden flex items-center justify-around px-2 py-3 border-t z-50"
           style={{ background: 'var(--bg-secondary)', borderColor: 'var(--border)' }}>
-          {navItems.filter(i => i.key !== 'settings').map(item => (
-            <NavItem
-              key={item.key}
-              href={item.path}
-              icon={item.icon}
-              label={t(item.key as keyof typeof t)}
-              active={pathname.startsWith(item.path)}
-            />
-          ))}
-          {/* Settings — icon only on mobile */}
-          <Link
-            href={`/${locale}/settings`}
-            className="flex flex-col items-center gap-1 px-3 py-2 rounded-lg transition-all"
-            style={{
-              color: pathname.startsWith(`/${locale}/settings`) ? 'var(--gold-primary)' : 'var(--text-secondary)',
-              background: pathname.startsWith(`/${locale}/settings`) ? 'rgba(201,168,76,0.08)' : 'transparent',
-            }}
-          >
-            <span className="w-5 h-5 flex items-center justify-center">{settingsIcon}</span>
-          </Link>
+          {['dashboard', 'practice', 'journal', 'progress', 'settings'].map(key => {
+            const item = navItems.find(i => i.key === key)!;
+            return (
+              <NavItem
+                key={item.key}
+                href={item.path}
+                icon={item.icon}
+                label={t(item.key as keyof typeof t)}
+                active={pathname.startsWith(item.path)}
+              />
+            );
+          })}
         </nav>
       </div>
     </div>

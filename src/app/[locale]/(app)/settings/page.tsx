@@ -133,13 +133,14 @@ export default function SettingsPage() {
     setLoading(false);
   }
 
-  async function urlBase64ToUint8Array(base64String: string): Promise<Uint8Array> {
-    const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
-    const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
-    const rawData = atob(base64);
-    const outputArray = new Uint8Array(rawData.length);
-    for (let i = 0; i < rawData.length; ++i) outputArray[i] = rawData.charCodeAt(i);
-    return outputArray;
+  function vapidKeyToUint8Array(base64url: string): Uint8Array<ArrayBuffer> {
+    const padding = '='.repeat((4 - (base64url.length % 4)) % 4);
+    const base64 = (base64url + padding).replace(/-/g, '+').replace(/_/g, '/');
+    const raw = atob(base64);
+    const buf = new ArrayBuffer(raw.length);
+    const arr = new Uint8Array(buf);
+    for (let i = 0; i < raw.length; i++) arr[i] = raw.charCodeAt(i);
+    return arr;
   }
 
   async function subscribeToPush(): Promise<PushSubscription | null> {
@@ -148,14 +149,15 @@ export default function SettingsPage() {
       return null;
     }
 
-    let reg = await navigator.serviceWorker.getRegistration('/sw.js');
-    if (!reg) {
-      reg = await navigator.serviceWorker.register('/sw.js', { scope: '/' });
-      await navigator.serviceWorker.ready;
-    }
+    // Várd meg a már regisztrált SW-t (a root layout regisztrálja)
+    const reg = await navigator.serviceWorker.ready;
 
-    const vapidKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!;
-    const applicationServerKey = (await urlBase64ToUint8Array(vapidKey)).buffer as ArrayBuffer;
+    const vapidKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
+    if (!vapidKey) {
+      setError('Konfigurációs hiba: VAPID kulcs hiányzik.');
+      return null;
+    }
+    const applicationServerKey = vapidKeyToUint8Array(vapidKey);
 
     const existing = await reg.pushManager.getSubscription();
     if (existing) return existing;
