@@ -70,6 +70,15 @@ export interface Practice {
   durationMax: number;
   frequency: 'morning' | 'evening' | 'both' | 'daily' | 'anytime';
   timerRequired: boolean;
+  sequentialGroup?: string;  // azonos csoportban lévők egymás után jönnek
+  sequentialOrder?: number;  // sorrend a csoporton belül
+}
+
+export interface PracticeUnlock {
+  id: string;
+  user_id: string;
+  practice_key: string;
+  unlocked_at: string;
 }
 
 export interface StepTrack {

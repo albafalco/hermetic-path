@@ -13,9 +13,9 @@ export const STEPS: Step[] = [
         summaryKey: 'steps_data.s1.spirit_summary',
         masteryNoteKey: 'steps_data.s1.spirit_mastery',
         practices: [
-          { key: 's1_spirit_observe', titleKey: 'practices.s1_spirit_observe.title', descriptionKey: 'practices.s1_spirit_observe.description', durationMin: 5, durationMax: 10, frequency: 'both', timerRequired: true },
-          { key: 's1_spirit_control', titleKey: 'practices.s1_spirit_control.title', descriptionKey: 'practices.s1_spirit_control.description', durationMin: 5, durationMax: 10, frequency: 'both', timerRequired: true },
-          { key: 's1_spirit_emptiness', titleKey: 'practices.s1_spirit_emptiness.title', descriptionKey: 'practices.s1_spirit_emptiness.description', durationMin: 5, durationMax: 10, frequency: 'daily', timerRequired: true },
+          { key: 's1_spirit_observe', titleKey: 'practices.s1_spirit_observe.title', descriptionKey: 'practices.s1_spirit_observe.description', durationMin: 5, durationMax: 10, frequency: 'both', timerRequired: true, sequentialGroup: 's1_spirit_thought', sequentialOrder: 0 },
+          { key: 's1_spirit_control', titleKey: 'practices.s1_spirit_control.title', descriptionKey: 'practices.s1_spirit_control.description', durationMin: 5, durationMax: 10, frequency: 'both', timerRequired: true, sequentialGroup: 's1_spirit_thought', sequentialOrder: 1 },
+          { key: 's1_spirit_emptiness', titleKey: 'practices.s1_spirit_emptiness.title', descriptionKey: 'practices.s1_spirit_emptiness.description', durationMin: 5, durationMax: 10, frequency: 'daily', timerRequired: true, sequentialGroup: 's1_spirit_thought', sequentialOrder: 2 },
           { key: 's1_spirit_journal', titleKey: 'practices.s1_spirit_journal.title', descriptionKey: 'practices.s1_spirit_journal.description', durationMin: 5, durationMax: 15, frequency: 'evening', timerRequired: false },
         ],
       },

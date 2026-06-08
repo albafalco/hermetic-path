@@ -84,6 +84,15 @@ CREATE TABLE IF NOT EXISTS practice_sessions (
   track        TEXT CHECK (track IN ('spirit', 'soul', 'body'))
 );
 
+-- Szekvenciális gyakorlat feloldások
+CREATE TABLE IF NOT EXISTS practice_unlocks (
+  id           UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id      UUID REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
+  practice_key TEXT NOT NULL,
+  unlocked_at  TIMESTAMPTZ DEFAULT NOW(),
+  UNIQUE(user_id, practice_key)
+);
+
 -- ============================================================
 -- 3. ROW LEVEL SECURITY
 -- ============================================================
@@ -93,6 +102,7 @@ ALTER TABLE daily_logs        ENABLE ROW LEVEL SECURITY;
 ALTER TABLE journal_entries   ENABLE ROW LEVEL SECURITY;
 ALTER TABLE element_mirror_traits ENABLE ROW LEVEL SECURITY;
 ALTER TABLE practice_sessions ENABLE ROW LEVEL SECURITY;
+ALTER TABLE practice_unlocks  ENABLE ROW LEVEL SECURITY;
 
 -- Töröljük a régi policy-kat, ha lennének (idempotens újrafuttatáshoz)
 DROP POLICY IF EXISTS "own_step_progress"        ON step_progress;
@@ -100,6 +110,7 @@ DROP POLICY IF EXISTS "own_daily_logs"           ON daily_logs;
 DROP POLICY IF EXISTS "own_journal_entries"      ON journal_entries;
 DROP POLICY IF EXISTS "own_element_mirror_traits" ON element_mirror_traits;
 DROP POLICY IF EXISTS "own_practice_sessions"    ON practice_sessions;
+DROP POLICY IF EXISTS "own_practice_unlocks"    ON practice_unlocks;
 
 CREATE POLICY "own_step_progress"
   ON step_progress FOR ALL
@@ -126,6 +137,11 @@ CREATE POLICY "own_practice_sessions"
   USING (auth.uid() = user_id)
   WITH CHECK (auth.uid() = user_id);
 
+CREATE POLICY "own_practice_unlocks"
+  ON practice_unlocks FOR ALL
+  USING (auth.uid() = user_id)
+  WITH CHECK (auth.uid() = user_id);
+
 -- ============================================================
 -- 4. JOGOSULTSÁGOK (authenticated role)
 -- ============================================================
@@ -135,6 +151,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.daily_logs            TO au
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.journal_entries       TO authenticated;
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.element_mirror_traits TO authenticated;
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.practice_sessions     TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.practice_unlocks      TO authenticated;
 
 -- ============================================================
 -- 5. INDEXEK

@@ -5,8 +5,8 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/client';
 import { STEPS } from '@/lib/data/steps';
-import type { StepProgress, DailyLog } from '@/types';
-import { trackColor } from '@/lib/utils';
+import type { StepProgress, DailyLog, PracticeUnlock } from '@/types';
+import { trackColor, getEffectivePractices } from '@/lib/utils';
 
 export default function DashboardPage() {
   const t = useTranslations();
@@ -17,6 +17,7 @@ export default function DashboardPage() {
   const [userName, setUserName] = useState('');
   const [stepProgress, setStepProgress] = useState<StepProgress[]>([]);
   const [todayLogs, setTodayLogs] = useState<DailyLog[]>([]);
+  const [practiceUnlocks, setPracticeUnlocks] = useState<PracticeUnlock[]>([]);
   const [streak, setStreak] = useState(0);
   const [loading, setLoading] = useState(true);
 
@@ -33,13 +34,15 @@ export default function DashboardPage() {
 
     const today = new Date().toISOString().split('T')[0];
 
-    const [progressRes, logsRes] = await Promise.all([
+    const [progressRes, logsRes, unlocksRes] = await Promise.all([
       supabase.from('step_progress').select('*').eq('user_id', user.id),
       supabase.from('daily_logs').select('*').eq('user_id', user.id).eq('log_date', today),
+      supabase.from('practice_unlocks').select('*').eq('user_id', user.id),
     ]);
 
     setStepProgress(progressRes.data || []);
     setTodayLogs(logsRes.data || []);
+    setPracticeUnlocks(unlocksRes.data || []);
 
     // Calculate streak
     const { data: allLogs } = await supabase
@@ -69,9 +72,10 @@ export default function DashboardPage() {
   const currentStepNumber = activeStep?.step_number || 1;
   const currentStep = STEPS.find(s => s.number === currentStepNumber);
 
-  const allPractices = currentStep?.tracks.flatMap(track => track.practices) || [];
-  const completedToday = todayLogs.filter(l => l.completed).length;
-  const totalPractices = allPractices.length;
+  const unlockedKeys = new Set(practiceUnlocks.map(u => u.practice_key));
+  const allEffective = currentStep?.tracks.flatMap(tr => getEffectivePractices(tr.practices, unlockedKeys)) || [];
+  const completedToday = allEffective.filter(p => todayLogs.some(l => l.practice_key === p.logKey && l.completed)).length;
+  const totalPractices = allEffective.length;
 
   if (loading) {
     return (
@@ -126,10 +130,10 @@ export default function DashboardPage() {
                   {t(`steps.tracks.${track.track}`)}
                 </div>
                 <div className="space-y-2">
-                  {track.practices.map(practice => {
-                    const done = todayLogs.some(l => l.practice_key === practice.key && l.completed);
+                  {getEffectivePractices(track.practices, unlockedKeys).map(practice => {
+                    const done = todayLogs.some(l => l.practice_key === practice.logKey && l.completed);
                     return (
-                      <div key={practice.key}
+                      <div key={practice.logKey}
                         className="flex items-center gap-3 p-3 rounded-lg"
                         style={{ background: 'var(--bg-elevated)', border: `1px solid ${done ? trackColor(track.track) + '40' : 'var(--border)'}` }}>
                         <div className="w-5 h-5 rounded-full border flex items-center justify-center flex-shrink-0"
@@ -138,6 +142,8 @@ export default function DashboardPage() {
                         </div>
                         <span className="font-crimson text-sm" style={{ color: done ? 'var(--text-secondary)' : 'var(--text-primary)', textDecoration: done ? 'line-through' : 'none' }}>
                           {t(`practices.${practice.key}.title`)}
+                          {practice.session === 'morning' && <span className="ml-1 text-xs" style={{ color: 'var(--text-muted)' }}>☀</span>}
+                          {practice.session === 'evening' && <span className="ml-1 text-xs" style={{ color: 'var(--text-muted)' }}>☽</span>}
                         </span>
                       </div>
                     );
