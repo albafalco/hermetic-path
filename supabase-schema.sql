@@ -127,7 +127,17 @@ CREATE POLICY "own_practice_sessions"
   WITH CHECK (auth.uid() = user_id);
 
 -- ============================================================
--- 4. INDEXEK
+-- 4. JOGOSULTSÁGOK (authenticated role)
+-- ============================================================
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.step_progress        TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.daily_logs            TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.journal_entries       TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.element_mirror_traits TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.practice_sessions     TO authenticated;
+
+-- ============================================================
+-- 5. INDEXEK
 -- ============================================================
 
 CREATE INDEX IF NOT EXISTS idx_step_progress_user
