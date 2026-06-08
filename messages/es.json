@@ -1,0 +1,460 @@
+{
+  "nav": {
+    "dashboard": "Panel",
+    "practice": "Práctica",
+    "journal": "Diario",
+    "mirror": "Espejo Elemental",
+    "progress": "Progreso",
+    "steps": "Pasos"
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "loginButton": "Entrar",
+    "registerButton": "Registrarse",
+    "noAccount": "¿No tienes cuenta?",
+    "hasAccount": "¿Ya tienes cuenta?",
+    "tagline": "Compañero digital del sistema iniciático de Franz Bardon",
+    "logout": "Cerrar sesión"
+  },
+  "dashboard": {
+    "greeting": "Bienvenido",
+    "stepBadge": "Paso {number}",
+    "dayCount": "Día {count}",
+    "streak": "Racha de {count} días",
+    "todayTitle": "Prácticas de hoy",
+    "completed": "{done}/{total} completados",
+    "writeJournal": "Escribir diario",
+    "openMirror": "Espejo elemental",
+    "viewProgress": "Ver progreso",
+    "noActivePractice": "Sin práctica activa",
+    "startPractice": "Comenzar un paso"
+  },
+  "steps": {
+    "title": "Los 10 Pasos",
+    "step": "Paso {number}",
+    "locked": "Bloqueado",
+    "active": "Activo",
+    "complete": "Completado",
+    "tracks": {
+      "spirit": "Espíritu",
+      "soul": "Alma",
+      "body": "Cuerpo"
+    },
+    "masteryNote": "Condición de maestría",
+    "markComplete": "Marcar paso como completado",
+    "duration": "Duración recomendada",
+    "overview": "Resumen",
+    "practices": "Prácticas",
+    "backToSteps": "Volver a los pasos"
+  },
+  "practice": {
+    "title": "Práctica Diaria",
+    "timer": "Temporizador",
+    "start": "Iniciar",
+    "pause": "Pausa",
+    "reset": "Restablecer",
+    "selectDuration": "Seleccionar duración",
+    "minutes": "{count} min",
+    "customMinutes": "Minutos personalizados",
+    "completed": "¡Completado!",
+    "sessionSaved": "Sesión guardada",
+    "frequency": {
+      "morning": "Mañana",
+      "evening": "Tarde",
+      "both": "Mañana y tarde",
+      "daily": "Diariamente",
+      "anytime": "En cualquier momento"
+    },
+    "markDone": "Marcar como hecho",
+    "timerRequired": "Temporizador requerido",
+    "todayPractices": "Prácticas de hoy"
+  },
+  "journal": {
+    "title": "Diario Mágico",
+    "newEntry": "Nueva entrada",
+    "noEntries": "Aún no hay entradas en el diario",
+    "mood": {
+      "excellent": "Excelente",
+      "good": "Bueno",
+      "neutral": "Neutral",
+      "difficult": "Difícil",
+      "dark": "Oscuro"
+    },
+    "fields": {
+      "date": "Fecha",
+      "step": "Paso",
+      "track": "Línea",
+      "trackGeneral": "General",
+      "title": "Título (opcional)",
+      "content": "Texto de la entrada",
+      "mood": "Estado de ánimo"
+    },
+    "save": "Guardar",
+    "search": "Buscar en el diario...",
+    "deleteConfirm": "¿Estás seguro de que quieres eliminar esta entrada?",
+    "saved": "Entrada guardada",
+    "deleted": "Entrada eliminada"
+  },
+  "mirror": {
+    "title": "Espejo Elemental",
+    "subtitle": "Cualidades del alma según los cuatro elementos",
+    "elements": {
+      "fire": "Fuego",
+      "water": "Agua",
+      "air": "Aire",
+      "earth": "Tierra",
+      "undefined": "Indefinido"
+    },
+    "polarity": {
+      "negative": "Espejo negro (debilidades)",
+      "positive": "Espejo blanco (virtudes)"
+    },
+    "intensity": "Intensidad",
+    "resolved": "Resuelto",
+    "addTrait": "Añadir rasgo",
+    "noTraits": "Aún no hay entradas",
+    "dominantElement": "Elemento dominante",
+    "modal": {
+      "title": "Nuevo rasgo",
+      "element": "Elemento",
+      "polarity": "Polaridad",
+      "trait": "Descripción del rasgo",
+      "intensityLabel": "Fuerza (1=más fuerte, 3=más débil)",
+      "save": "Añadir"
+    },
+    "saved": "Rasgo añadido",
+    "resolvedMsg": "Rasgo resuelto",
+    "deleted": "Rasgo eliminado"
+  },
+  "progress": {
+    "title": "Progreso",
+    "overallProgress": "Progreso general",
+    "longestStreak": "Racha más larga",
+    "totalSessions": "Total de sesiones",
+    "totalMinutes": "Total de minutos de meditación",
+    "days": "{count} días",
+    "activityTitle": "Calendario de actividades",
+    "spiritTrack": "Línea del espíritu",
+    "soulTrack": "Línea del alma",
+    "bodyTrack": "Línea del cuerpo"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Se produjo un error",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "language": "Idioma",
+    "yes": "Sí",
+    "no": "No",
+    "close": "Cerrar"
+  },
+  "steps_data": {
+    "s1": {
+      "title": "Primer Paso",
+      "overview": "Establecer los fundamentos del camino: control del pensamiento, autoconocimiento y gestión consciente del cuerpo.",
+      "spirit_title": "Escuela Mágica del Espíritu",
+      "spirit_summary": "Observación, disciplina y dominio completo de los pensamientos.",
+      "spirit_mastery": "Completado cuando un solo pensamiento puede mantenerse durante 10 minutos, luego vaciado completo de pensamientos.",
+      "soul_title": "Escuela Mágica del Alma",
+      "soul_summary": "Autoconocimiento y creación de un mapa del alma según los cuatro elementos.",
+      "soul_mastery": "Completado cuando el espejo del alma blanco y negro está completo y detallado con tres niveles de intensidad.",
+      "body_title": "Escuela Mágica del Cuerpo",
+      "body_summary": "Gestión consciente del cuerpo físico, respiración y aplicación mágica del agua.",
+      "body_mastery": "Completado cuando todo esto se ha convertido en parte de la rutina diaria."
+    },
+    "s2": {
+      "title": "Segundo Paso",
+      "overview": "Comprensión de la autosugestión y la mente subconsciente, concentración más profunda, respiración de elementos.",
+      "spirit_title": "Escuela Mágica del Espíritu",
+      "spirit_summary": "Desarrollo de habilidades de concentración profunda con múltiples sentidos simultáneamente.",
+      "spirit_mastery": "Completado cuando la concentración en objetos vivos e inertes puede mantenerse sin perturbaciones durante 10 minutos.",
+      "soul_title": "Escuela Mágica del Alma",
+      "soul_summary": "Equilibrio astral-mágico y refinamiento del carácter según los elementos.",
+      "soul_mastery": "Completado cuando las debilidades más graves pueden reducirse mediante trabajo consciente.",
+      "body_title": "Escuela Mágica del Cuerpo",
+      "body_summary": "Respiración consciente por los poros y dominio del cuerpo en la vida cotidiana.",
+      "body_mastery": "Completado cuando los ejercicios de respiración y postura se han vuelto automáticos."
+    },
+    "s3": {
+      "title": "Tercer Paso",
+      "overview": "Saber, querer, atreverse, guardar silencio – los cuatro pilares de la magia. Respiración elemental y trabajo con la fuerza vital.",
+      "spirit_title": "Escuela Mágica del Espíritu",
+      "spirit_summary": "Concentración con múltiples sentidos simultáneamente en objetos, paisajes y seres vivos.",
+      "spirit_mastery": "Completado cuando cualquier objeto o escena puede visualizarse durante 5 minutos con los ojos abiertos.",
+      "soul_title": "Escuela Mágica del Alma",
+      "soul_summary": "Respiración elemental por todo el cuerpo – recepción y experiencia consciente de los cuatro elementos.",
+      "soul_mastery": "Completado cuando los efectos de los elementos son perceptibles físicamente sin concentración.",
+      "body_title": "Escuela Mágica del Cuerpo",
+      "body_summary": "Acumulación de fuerza vital y fundamentos del biomagnetismo.",
+      "body_mastery": "Completado cuando la fuerza vital puede dirigirse dentro del propio cuerpo y transferirse a metas externas."
+    },
+    "s4": {
+      "title": "Cuarto Paso",
+      "overview": "Meditación Akasha, acumulación elemental, desarrollo de los sentidos astrales.",
+      "spirit_title": "Escuela Mágica del Espíritu",
+      "spirit_summary": "Comprensión del principio Akasha, meditación sobre el vacío y expansión de la conciencia.",
+      "spirit_mastery": "Completado cuando la meditación Akasha puede mantenerse durante al menos 10 minutos en un estado profundo.",
+      "soul_title": "Escuela Mágica del Alma",
+      "soul_summary": "Acumulación y condensación de elementos dentro del propio cuerpo.",
+      "soul_mastery": "Completado cuando los cuatro elementos pueden cargarse en el cuerpo con efectos físicos perceptibles.",
+      "body_title": "Escuela Mágica del Cuerpo",
+      "body_summary": "Desarrollo de los sentidos astrales (vista, oído, sensación) mediante métodos sutiles.",
+      "body_mastery": "Completado cuando los sentidos astrales funcionan al menos en un nivel básico."
+    },
+    "s5": {
+      "title": "Quinto Paso",
+      "overview": "Acumulación externa de elementos, pneuma-magia, auxiliares mágicos.",
+      "spirit_title": "Escuela Mágica del Espíritu",
+      "spirit_summary": "Condensación y disolución de elementos en el espacio exterior.",
+      "spirit_mastery": "Completado cuando los elementos pueden ser percibidos en una habitación exterior por otros.",
+      "soul_title": "Escuela Mágica del Alma",
+      "soul_summary": "Profundización de los sentidos astrales, desarrollo de la clarividencia y clariaudiencia.",
+      "soul_mastery": "Completado cuando la visión astral es accesible a nivel elemental sin un médium.",
+      "body_title": "Escuela Mágica del Cuerpo",
+      "body_summary": "Acumulación de luz y fuerza vital, impregnación, magnetismo personal.",
+      "body_mastery": "Completado cuando la fuerza magnética puede aplicarse a objetos y personas."
+    },
+    "s6": {
+      "title": "Sexto Paso",
+      "overview": "Síntesis del desarrollo mágico: preparación para el viaje astral, profundización de la magia elemental.",
+      "spirit_title": "Escuela Mágica del Espíritu",
+      "spirit_summary": "Fundamento del viaje astral, prácticas de transferencia de conciencia.",
+      "spirit_mastery": "Completado cuando la conciencia puede transferirse temporalmente a otro objeto o ser.",
+      "soul_title": "Escuela Mágica del Alma",
+      "soul_summary": "Magia elemental en el plano astral, equilibrio espiritual y anímico sutil.",
+      "soul_mastery": "Completado cuando las características únicas del plano astral son reconocibles y manejables.",
+      "body_title": "Escuela Mágica del Cuerpo",
+      "body_summary": "Saturación de habitaciones con elementos, concentradores de luz, campo de fuerza mágico personal.",
+      "body_mastery": "Completado cuando el campo de fuerza es perceptible por otros."
+    },
+    "s7": {
+      "title": "Séptimo Paso",
+      "overview": "Carta mágica, condensadores fluidos, precognición y viaje astral.",
+      "spirit_title": "Escuela Mágica del Espíritu",
+      "spirit_summary": "Creación de cartas mágicas y condensadores líquidos, profundización de la visión astral.",
+      "spirit_mastery": "Completado cuando los auxiliares mágicos funcionan de manera intencionada y confiable.",
+      "soul_title": "Escuela Mágica del Alma",
+      "soul_summary": "Realización consciente del viaje astral, control del cuerpo astral.",
+      "soul_mastery": "Completado cuando el cuerpo astral puede funcionar independientemente del físico.",
+      "body_title": "Escuela Mágica del Cuerpo",
+      "body_summary": "Creación y aplicación de condensadores líquidos, fortalecimiento de los sentidos astrales.",
+      "body_mastery": "Completado cuando los condensadores pueden aplicarse con efecto perceptible."
+    },
+    "s8": {
+      "title": "Octavo Paso",
+      "overview": "Evocación de seres espirituales, servidores mágicos, oráculos y adivinación.",
+      "spirit_title": "Escuela Mágica del Espíritu",
+      "spirit_summary": "Evocación consciente de seres espirituales y comunicación con ellos.",
+      "spirit_mastery": "Completado cuando puede establecerse comunicación bidireccional confiable con seres espirituales.",
+      "soul_title": "Escuela Mágica del Alma",
+      "soul_summary": "Percepción espiritual sutil: intuición, visión simbólica, oráculos.",
+      "soul_mastery": "Completado cuando la intuición puede aplicarse de manera confiable para decisiones importantes.",
+      "body_title": "Escuela Mágica del Cuerpo",
+      "body_summary": "Influencia espiritual en el plano físico, trabajo con campos de fuerza y métodos mágicos de protección.",
+      "body_mastery": "Completado cuando los efectos físicos de la fuerza espiritual pueden lograrse de manera confiable."
+    },
+    "s9": {
+      "title": "Noveno Paso",
+      "overview": "Integración completa de las fuerzas mágicas, métodos Cabalísticos.",
+      "spirit_title": "Escuela Mágica del Espíritu",
+      "spirit_summary": "Métodos Cabalísticos, aplicación mágica de nombres divinos y letras.",
+      "spirit_mastery": "Completado cuando las fuerzas Cabalísticas pueden aplicarse de manera consciente e intencionada.",
+      "soul_title": "Escuela Mágica del Alma",
+      "soul_summary": "Equilibrio completo e integración del alma en todos los planos.",
+      "soul_mastery": "Completado cuando todos los elementos están en equilibrio armonioso dentro del alma.",
+      "body_title": "Escuela Mágica del Cuerpo",
+      "body_summary": "Perfeccionamiento del cuerpo como instrumento mágico, uso máximo de las fuerzas físicas.",
+      "body_mastery": "Completado cuando el cuerpo funciona como instrumento mágico perfecto en todas las circunstancias."
+    },
+    "s10": {
+      "title": "Décimo Paso",
+      "overview": "La plenitud de la iniciación: adeptato, dominio mágico de los cuatro mundos.",
+      "spirit_title": "Escuela Mágica del Espíritu",
+      "spirit_summary": "Conocimiento mágico completo del adeptato aplicado en los niveles más altos.",
+      "spirit_mastery": "Completado cuando cada ley y fuerza mágica está completamente bajo el control de la voluntad.",
+      "soul_title": "Escuela Mágica del Alma",
+      "soul_summary": "Perfección del alma, experiencia consciente de la chispa divina.",
+      "soul_mastery": "Completado cuando la naturaleza divina y humana están completamente integradas.",
+      "body_title": "Escuela Mágica del Cuerpo",
+      "body_summary": "Integración espiritual-anímica-física completa del cuerpo y el sello de la iniciación.",
+      "body_mastery": "Completado cuando cada aspecto de la iniciación completa se ha realizado."
+    }
+  },
+  "practices": {
+    "s1_spirit_observe": {
+      "title": "Observación de Pensamientos",
+      "description": "Siéntate cómodamente en una silla o recuéstate. Relaja completamente tu cuerpo, cierra los ojos. Como observador pasivo, sigue el flujo de tus pensamientos durante 5-10 minutos – no interfieras, simplemente observa desde una distancia neutral."
+    },
+    "s1_spirit_control": {
+      "title": "Disciplina del Pensamiento",
+      "description": "Elige un solo pensamiento y mantenlo con toda tu fuerza. Rechaza enérgicamente cada pensamiento intruso. Aumenta el tiempo en 1 minuto diariamente hasta que puedas mantener un solo pensamiento durante 10 minutos."
+    },
+    "s1_spirit_emptiness": {
+      "title": "Vaciamiento Completo del Pensamiento",
+      "description": "Recuéstate o siéntate cómodamente. Relaja completamente tu cuerpo. Rechaza enérgicamente cada pensamiento que surja. Meta: 10 minutos de silencio mental completo sin quedarse dormido."
+    },
+    "s1_spirit_journal": {
+      "title": "Diario Mágico + Autocrítica",
+      "description": "Por la tarde, registra los resultados del día, éxitos y fracasos, duraciones. Haz un plan para el día siguiente. Practica la autocrítica sin juicio – sé estricto pero justo contigo mismo."
+    },
+    "s1_soul_introspection": {
+      "title": "Introspección – Autoconocimiento",
+      "description": "Investiga cada debilidad, falta y pasión en tu alma. Sé estricto y completamente honesto. Escribe todo – nada puede permanecer oculto. Este es el fundamento del espejo del alma."
+    },
+    "s1_soul_mirror_negative": {
+      "title": "Espejo Negro del Alma",
+      "description": "Sistematiza tus faltas descubiertas según los cuatro elementos (Fuego/Agua/Aire/Tierra) en tres niveles de intensidad: 1=más burdo y frecuente, 2=intensidad media, 3=debilidad que aparece raramente."
+    },
+    "s1_soul_mirror_positive": {
+      "title": "Espejo Blanco del Alma",
+      "description": "Sistematiza igualmente tus buenas cualidades, fortalezas y virtudes. Mismos cuatro elementos y tres niveles. Sé igual de minucioso que con el espejo negro."
+    },
+    "s1_body_morning": {
+      "title": "Rutina de Despertar Corporal Matutino",
+      "description": "Después de despertar: cepillado en seco de todo el cuerpo hasta enrojecer la piel, luego lavado con agua fría y frotado vigoroso. Breve ejercicio matutino para flexibilidad y estimulación de la circulación sanguínea."
+    },
+    "s1_body_breathing": {
+      "title": "Respiración Consciente de Deseos",
+      "description": "Sentado, relajado: al inhalar, imagina que junto con el aire también la cualidad deseada (salud, paz, fuerza) entra en tu cuerpo. Comienza con 7 respiraciones, aumenta en una diariamente."
+    },
+    "s1_body_eating": {
+      "title": "Ingesta Consciente de Alimentos",
+      "description": "Antes de comer, concéntrate en un deseo. Imagina que junto con la comida tu deseo también se convierte en parte de tu cuerpo. Come lentamente y conscientemente, libre de distracciones."
+    },
+    "s1_body_water": {
+      "title": "Magia del Agua",
+      "description": "Con cada lavado de manos, imagina que junto con el agua también estás lavando tus debilidades. Se van con el agua que fluye. Opcionalmente: báñate en agua cargada con un deseo."
+    },
+    "s2_spirit_concentration": {
+      "title": "Concentración en Objetos Vivos",
+      "description": "Coloca un objeto frente a ti (llama de vela, flor, piedra). Cierra los ojos y evoca vívamente su imagen, luego abre los ojos. Meta: mantener la imagen sin perturbación durante 5-10 minutos con los ojos cerrados."
+    },
+    "s2_spirit_multi_sense": {
+      "title": "Concentración Multisensorial",
+      "description": "Imagina un objeto y evoca simultáneamente su vista, sonido y tacto. Agrega gradualmente detalles sensoriales y mantén la experiencia tanto tiempo como sea posible."
+    },
+    "s2_soul_balance": {
+      "title": "Equilibrio Astral-Mágico",
+      "description": "Examina el equilibrio de los elementos en tu alma basándote en el espejo creado anteriormente. Planifica pasos conscientes para reducir las debilidades más graves y trabaja en ellos diariamente."
+    },
+    "s2_soul_character": {
+      "title": "Refinamiento del Carácter",
+      "description": "Elige una cualidad negativa del espejo negro. En cada situación diaria donde esta debilidad aparecería, aplica conscientemente la virtud opuesta. Lleva registros del progreso."
+    },
+    "s2_body_breathing": {
+      "title": "Respiración Consciente por los Poros",
+      "description": "Siéntate cómodamente. Imagina que no solo tus pulmones, sino toda la superficie de tu piel respira a través de cada poro. Siente cómo la energía vital fluye desde todas las direcciones."
+    },
+    "s2_body_posture": {
+      "title": "Postura Consciente",
+      "description": "Presta atención a tu postura durante todo el día. De pie, sentado, camina conscientemente y erguido. La postura corporal afecta al alma y al espíritu – la postura digna irradia poder y confianza."
+    },
+    "s3_spirit_multi": {
+      "title": "Concentración Multisensorial",
+      "description": "Imagina un objeto (p. ej. vela ardiendo) y mantén simultáneamente su vista, sonido (chisporroteo, crepitación) y calor. Meta: concentrarse con los tres sentidos simultáneamente durante 5 minutos."
+    },
+    "s3_spirit_landscape": {
+      "title": "Visualización de Paisajes y Lugares",
+      "description": "Imagina un paisaje o habitación familiar en todos sus detalles. La visualización debe ser tan vívida como si realmente estuvieras allí. Intenta mantener la imagen con los ojos abiertos."
+    },
+    "s3_soul_elements": {
+      "title": "Respiración Elemental por Todo el Cuerpo",
+      "description": "A través de la respiración pulmonar e imaginada respiración por los poros, atrae el elemento dado (Fuego, Agua, Aire, Tierra) a todo tu cuerpo. Siente su efecto característico: calor, frío, ligereza, pesadez. Luego disuelve."
+    },
+    "s3_body_vitality": {
+      "title": "Acumulación de Fuerza Vital",
+      "description": "Respira energía vital con todo tu cuerpo. Condénsala en el centro del corazón o plexo solar, luego dirígela a una parte específica del cuerpo o meta externa. Intensifica la fuerza con la respiración, luego disuelve."
+    },
+    "s4_spirit_akasha": {
+      "title": "Meditación Akasha",
+      "description": "Siéntate cómodamente y contempla el espacio infinito de tu vacío interior. Akasha es el estado antes de todos los elementos – el sentimiento de eternidad y omnipresencia. Intenta sumergirte en este vacío."
+    },
+    "s4_soul_accumulation": {
+      "title": "Acumulación Elemental",
+      "description": "Elige un elemento y condénsalo en una parte de tu cuerpo (p. ej. palma, estómago). Siente el efecto físico: para el fuego calor, para el agua frío, para el aire ligereza, para la tierra pesadez. Luego disuelve."
+    },
+    "s4_body_astral_senses": {
+      "title": "Desarrollo de los Sentidos Astrales",
+      "description": "Prepara los fundamentos de la visión astral: con los ojos cerrados imagina luz, luego intenta percibir fenómenos astrales reales. Presta mayor atención a los procesos de percepción interna."
+    },
+    "s5_spirit_external": {
+      "title": "Acumulación Elemental Externa",
+      "description": "Condensa el elemento no solo en tu propio cuerpo sino también en el espacio de la habitación. Imagina que la habitación se satura con la energía del elemento seleccionado. Siente y observa el efecto, luego disuelve."
+    },
+    "s5_soul_clairvoyance": {
+      "title": "Desarrollo de la Clarividencia",
+      "description": "Practica la visión astral con ayuda de un condensador líquido (compresa ocular), luego también sin él. Intenta 'ver' cosas cercanas y lejanas con tu ojo astral."
+    },
+    "s5_body_magnetism": {
+      "title": "Magnetismo Personal",
+      "description": "Satura tu cuerpo con energía vital y luz vívida en tu imaginación. Siente cómo esta fuerza magnética irradia de ti. Practica el tratamiento de objetos y personas con esta energía."
+    },
+    "s6_spirit_projection": {
+      "title": "Transferencia de Conciencia",
+      "description": "Imagina que tu conciencia sale de tu cuerpo y entra en un objeto o en el cuerpo de un animal. Experimenta la percepción del otro ser. Este es un ejercicio preliminar para el viaje astral – profundiza gradualmente."
+    },
+    "s6_soul_astral_balance": {
+      "title": "Equilibrio en el Plano Astral",
+      "description": "Profundiza la magia elemental en el plano astral. Examina el equilibrio y estado de tu cuerpo astral. Trabaja en niveles más altos de refinamiento del alma, en armonía con las leyes de la esfera astral."
+    },
+    "s6_body_room_charging": {
+      "title": "Saturación de Habitaciones con Elementos",
+      "description": "Llena toda la habitación con el elemento o la energía vital de tu elección. Tu meta puede ser curación, protección o inspiración. Siente cómo cambia el espacio – si otros también lo sienten, es una buena señal."
+    },
+    "s7_spirit_letter": {
+      "title": "Carta Mágica y Condensadores",
+      "description": "Crea tu primer condensador líquido personal. Cárgalo con un deseo e intención dirigida. Estudia la profundización gradual de la visión astral con su ayuda."
+    },
+    "s7_soul_astral_travel": {
+      "title": "Viaje Astral",
+      "description": "Libera conscientemente tu cuerpo astral del físico. Visita lugares predeterminados en tu cuerpo astral. Después de regresar, registra las experiencias detalladamente en el diario."
+    },
+    "s7_body_condensers": {
+      "title": "Aplicación de Condensadores Líquidos",
+      "description": "Aplica los condensadores preparados para fortalecer los sentidos astrales. Aplícalos como compresa en los ojos y observa tus experiencias internas. Practica regularmente."
+    },
+    "s8_spirit_beings": {
+      "title": "Evocación de Seres Espirituales",
+      "description": "Intenta comunicarte conscientemente con seres espirituales en el plano astral. Sé cauteloso y discerniente: no todo espíritu que aparece es benevolente. Pide señales, prueba."
+    },
+    "s8_soul_intuition": {
+      "title": "Intuición y Oráculos",
+      "description": "Profundiza tus habilidades intuitivas a través de la visión simbólica y la adivinación. Intenta sentir eventos futuros en la meditación, luego verifica los resultados."
+    },
+    "s8_body_influence": {
+      "title": "Influencia Espiritual en el Plano Físico",
+      "description": "Aplica tu fuerza mágica a la curación física, protección e influencia positiva. Estudia los límites y reglas éticas. El conocimiento viene con poder, junto con responsabilidad."
+    },
+    "s9_spirit_kabbalah": {
+      "title": "Métodos Cabalísticos",
+      "description": "Trabaja con nombres divinos y letras, sus vibraciones y poder mágico. Profundiza la aplicación práctica del Tetragrámaton y otras fórmulas Cabalísticas."
+    },
+    "s9_soul_integration": {
+      "title": "Integración Completa del Alma",
+      "description": "Profundiza todo el trabajo anterior del alma. Esfuérzate por el equilibrio completo de los cuatro elementos en tu alma. Examina y refina el espejo – ahora a un nivel mucho más profundo que en el primer paso."
+    },
+    "s9_body_mastery": {
+      "title": "Cuerpo como Instrumento Mágico",
+      "description": "Dominio espiritual-anímico completo del cuerpo. Cada habilidad mágica fluye libremente también a través del cuerpo físico. El cuerpo es sano, flexible y perfecto instrumento del espíritu."
+    },
+    "s10_spirit_adept": {
+      "title": "Adeptato – Conocimiento Espiritual Completo",
+      "description": "Síntesis de todos los principios, leyes y fuerzas aprendidos. El adepto se mueve libremente en el nivel de los cuatro mundos, conoce sus leyes y es su maestro. Este es el objetivo espiritual del décimo paso."
+    },
+    "s10_soul_divine": {
+      "title": "Vivir la Chispa Divina",
+      "description": "Perfección del alma: integración completa de la naturaleza divina y humana. El adepto sabe de dónde vino, dónde está y hacia dónde lleva su camino. El amor divino es el fundamento."
+    },
+    "s10_body_seal": {
+      "title": "El Sello de la Iniciación",
+      "description": "Perfecta armonía de cuerpo, alma y espíritu – este es el sello de la iniciación. Cada puerta está abierta, cada posibilidad es realizable. Este no es un punto final, sino un nuevo comienzo."
+    }
+  }
+}

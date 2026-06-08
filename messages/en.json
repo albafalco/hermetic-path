@@ -1,0 +1,460 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "practice": "Practice",
+    "journal": "Journal",
+    "mirror": "Element Mirror",
+    "progress": "Progress",
+    "steps": "Steps"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email address",
+    "password": "Password",
+    "loginButton": "Sign In",
+    "registerButton": "Register",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "tagline": "Digital companion for Franz Bardon's initiatory system",
+    "logout": "Sign Out"
+  },
+  "dashboard": {
+    "greeting": "Welcome",
+    "stepBadge": "Step {number}",
+    "dayCount": "Day {count}",
+    "streak": "{count} day streak",
+    "todayTitle": "Today's Practices",
+    "completed": "{done}/{total} completed",
+    "writeJournal": "Write Journal",
+    "openMirror": "Element Mirror",
+    "viewProgress": "View Progress",
+    "noActivePractice": "No active practice",
+    "startPractice": "Begin a step"
+  },
+  "steps": {
+    "title": "The 10 Steps",
+    "step": "Step {number}",
+    "locked": "Locked",
+    "active": "Active",
+    "complete": "Complete",
+    "tracks": {
+      "spirit": "Spirit",
+      "soul": "Soul",
+      "body": "Body"
+    },
+    "masteryNote": "Mastery condition",
+    "markComplete": "Mark Step Complete",
+    "duration": "Recommended duration",
+    "overview": "Overview",
+    "practices": "Practices",
+    "backToSteps": "Back to Steps"
+  },
+  "practice": {
+    "title": "Daily Practice",
+    "timer": "Timer",
+    "start": "Start",
+    "pause": "Pause",
+    "reset": "Reset",
+    "selectDuration": "Select Duration",
+    "minutes": "{count} min",
+    "customMinutes": "Custom minutes",
+    "completed": "Completed!",
+    "sessionSaved": "Session saved",
+    "frequency": {
+      "morning": "Morning",
+      "evening": "Evening",
+      "both": "Morning & Evening",
+      "daily": "Daily",
+      "anytime": "Anytime"
+    },
+    "markDone": "Mark as Done",
+    "timerRequired": "Timer required",
+    "todayPractices": "Today's practices"
+  },
+  "journal": {
+    "title": "Magical Journal",
+    "newEntry": "New Entry",
+    "noEntries": "No journal entries yet",
+    "mood": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "neutral": "Neutral",
+      "difficult": "Difficult",
+      "dark": "Dark"
+    },
+    "fields": {
+      "date": "Date",
+      "step": "Step",
+      "track": "Track",
+      "trackGeneral": "General",
+      "title": "Title (optional)",
+      "content": "Entry text",
+      "mood": "Mood"
+    },
+    "save": "Save",
+    "search": "Search journal...",
+    "deleteConfirm": "Are you sure you want to delete this entry?",
+    "saved": "Entry saved",
+    "deleted": "Entry deleted"
+  },
+  "mirror": {
+    "title": "Element Mirror",
+    "subtitle": "Soul qualities according to the four elements",
+    "elements": {
+      "fire": "Fire",
+      "water": "Water",
+      "air": "Air",
+      "earth": "Earth",
+      "undefined": "Undefined"
+    },
+    "polarity": {
+      "negative": "Black mirror (weaknesses)",
+      "positive": "White mirror (virtues)"
+    },
+    "intensity": "Intensity",
+    "resolved": "Resolved",
+    "addTrait": "Add trait",
+    "noTraits": "No entries yet",
+    "dominantElement": "Dominant element",
+    "modal": {
+      "title": "New trait",
+      "element": "Element",
+      "polarity": "Polarity",
+      "trait": "Trait description",
+      "intensityLabel": "Strength (1=strongest, 3=weakest)",
+      "save": "Add"
+    },
+    "saved": "Trait added",
+    "resolvedMsg": "Trait resolved",
+    "deleted": "Trait deleted"
+  },
+  "progress": {
+    "title": "Progress",
+    "overallProgress": "Overall progress",
+    "longestStreak": "Longest streak",
+    "totalSessions": "Total sessions",
+    "totalMinutes": "Total meditation minutes",
+    "days": "{count} days",
+    "activityTitle": "Activity calendar",
+    "spiritTrack": "Spirit track",
+    "soulTrack": "Soul track",
+    "bodyTrack": "Body track"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "language": "Language",
+    "yes": "Yes",
+    "no": "No",
+    "close": "Close"
+  },
+  "steps_data": {
+    "s1": {
+      "title": "First Step",
+      "overview": "Laying the foundations of the path: thought control, self-knowledge, and conscious management of the body.",
+      "spirit_title": "Magical Spirit Schooling",
+      "spirit_summary": "Observation, discipline and full mastery of thoughts.",
+      "spirit_mastery": "Completed when a single thought can be held for 10 minutes, then complete thought-emptiness.",
+      "soul_title": "Magical Soul Schooling",
+      "soul_summary": "Self-knowledge and creating a soul map according to the four elements.",
+      "soul_mastery": "Completed when the white and black soul mirrors are complete and detailed with three intensity levels.",
+      "body_title": "Magical Body Schooling",
+      "body_summary": "Conscious management of the physical body, breathing, and magical application of water.",
+      "body_mastery": "Completed when all these have become part of the daily routine."
+    },
+    "s2": {
+      "title": "Second Step",
+      "overview": "Understanding autosuggestion and the subconscious mind, deeper concentration, breathing of elements.",
+      "spirit_title": "Magical Spirit Schooling",
+      "spirit_summary": "Developing deep concentration abilities with multiple senses simultaneously.",
+      "spirit_mastery": "Completed when concentration on living and non-living objects can be maintained undisturbed for 10 minutes.",
+      "soul_title": "Magical Soul Schooling",
+      "soul_summary": "Astral-magical balance and character refinement according to elements.",
+      "soul_mastery": "Completed when the most severe weaknesses can be reduced through conscious work.",
+      "body_title": "Magical Body Schooling",
+      "body_summary": "Conscious pore breathing and body mastery in everyday life.",
+      "body_mastery": "Completed when breathing and posture practices have become automatic."
+    },
+    "s3": {
+      "title": "Third Step",
+      "overview": "To know, to will, to dare, to keep silent – the four pillars of magic. Element breathing and vital force work.",
+      "spirit_title": "Magical Spirit Schooling",
+      "spirit_summary": "Concentration with multiple senses simultaneously on objects, landscapes, and living beings.",
+      "spirit_mastery": "Completed when any object or scene can be visualized for 5 minutes with open eyes.",
+      "soul_title": "Magical Soul Schooling",
+      "soul_summary": "Element breathing throughout the entire body – conscious intake and experience of the four elements.",
+      "soul_mastery": "Completed when the effects of elements are physically perceptible without concentration.",
+      "body_title": "Magical Body Schooling",
+      "body_summary": "Vital force accumulation and basics of biomagnetism.",
+      "body_mastery": "Completed when vital force can be directed within one's own body and transferred to external goals."
+    },
+    "s4": {
+      "title": "Fourth Step",
+      "overview": "Akasha meditation, element accumulation, development of astral senses.",
+      "spirit_title": "Magical Spirit Schooling",
+      "spirit_summary": "Understanding the Akasha principle, meditation on emptiness, and expansion of consciousness.",
+      "spirit_mastery": "Completed when Akasha meditation can be maintained for at least 10 minutes in a deep state.",
+      "soul_title": "Magical Soul Schooling",
+      "soul_summary": "Accumulation and condensation of elements within one's own body.",
+      "soul_mastery": "Completed when all four elements can be loaded into the body with perceptible physical effects.",
+      "body_title": "Magical Body Schooling",
+      "body_summary": "Development of astral senses (sight, hearing, feeling) through subtle methods.",
+      "body_mastery": "Completed when the astral senses function at least at a basic level."
+    },
+    "s5": {
+      "title": "Fifth Step",
+      "overview": "External accumulation of elements, pneuma-magic, magical aids.",
+      "spirit_title": "Magical Spirit Schooling",
+      "spirit_summary": "Condensing and dissolving elements in external space.",
+      "spirit_mastery": "Completed when elements can be sensed in an external room by others.",
+      "soul_title": "Magical Soul Schooling",
+      "soul_summary": "Deepening astral senses, developing clairvoyance and clairaudience.",
+      "soul_mastery": "Completed when astral vision is accessible at an elemental level without a medium.",
+      "body_title": "Magical Body Schooling",
+      "body_summary": "Light and vital force accumulation, impregnation, personal magnetism.",
+      "body_mastery": "Completed when magnetic force can be applied to objects and persons."
+    },
+    "s6": {
+      "title": "Sixth Step",
+      "overview": "Synthesis of magical development: preparation for astral travel, deepening element magic.",
+      "spirit_title": "Magical Spirit Schooling",
+      "spirit_summary": "Foundation of astral travel, practices of consciousness transference.",
+      "spirit_mastery": "Completed when consciousness can temporarily be placed into another object or being.",
+      "soul_title": "Magical Soul Schooling",
+      "soul_summary": "Element magic on the astral plane, subtle spiritual and soul balance.",
+      "soul_mastery": "Completed when the unique characteristics of the astral plane are recognizable and manageable.",
+      "body_title": "Magical Body Schooling",
+      "body_summary": "Room saturation with elements, light concentrators, personal magical force field.",
+      "body_mastery": "Completed when the force field is perceptible by others."
+    },
+    "s7": {
+      "title": "Seventh Step",
+      "overview": "Magical letter, fluid condensers, precognition, and astral travel.",
+      "spirit_title": "Magical Spirit Schooling",
+      "spirit_summary": "Creating magical letters and liquid condensers, deepening astral vision.",
+      "spirit_mastery": "Completed when magical aids work purposefully and reliably.",
+      "soul_title": "Magical Soul Schooling",
+      "soul_summary": "Conscious realization of astral travel, control of the astral body.",
+      "soul_mastery": "Completed when the astral body can function independently from the physical.",
+      "body_title": "Magical Body Schooling",
+      "body_summary": "Creating and applying liquid condensers, strengthening astral senses.",
+      "body_mastery": "Completed when condensers can be applied with perceptible effect."
+    },
+    "s8": {
+      "title": "Eighth Step",
+      "overview": "Evocation of spiritual beings, magical servitors, oracles and divination.",
+      "spirit_title": "Magical Spirit Schooling",
+      "spirit_summary": "Conscious evocation of spiritual beings and communication with them.",
+      "spirit_mastery": "Completed when reliable two-way communication can be established with spiritual beings.",
+      "soul_title": "Magical Soul Schooling",
+      "soul_summary": "Subtle spiritual perception: intuition, symbolic vision, oracles.",
+      "soul_mastery": "Completed when intuition can be reliably applied for important decisions.",
+      "body_title": "Magical Body Schooling",
+      "body_summary": "Spiritual influence on the physical plane, force field work and protective magical methods.",
+      "body_mastery": "Completed when the physical effects of spiritual force can be reliably achieved."
+    },
+    "s9": {
+      "title": "Ninth Step",
+      "overview": "Full integration of magical forces, Kabbalistic methods.",
+      "spirit_title": "Magical Spirit Schooling",
+      "spirit_summary": "Kabbalistic methods, magical application of divine names and letters.",
+      "spirit_mastery": "Completed when Kabbalistic forces can be applied consciously and purposefully.",
+      "soul_title": "Magical Soul Schooling",
+      "soul_summary": "Complete balance and integration of the soul on all planes.",
+      "soul_mastery": "Completed when all elements are in harmonious balance within the soul.",
+      "body_title": "Magical Body Schooling",
+      "body_summary": "Perfecting the body as a magical instrument, maximum use of physical forces.",
+      "body_mastery": "Completed when the body functions as a perfect magical instrument under all circumstances."
+    },
+    "s10": {
+      "title": "Tenth Step",
+      "overview": "The completeness of initiation: adeptship, magical mastery of the four worlds.",
+      "spirit_title": "Magical Spirit Schooling",
+      "spirit_summary": "Complete magical knowledge of adeptship applied at the highest levels.",
+      "spirit_mastery": "Completed when every magical law and force is fully under the will's control.",
+      "soul_title": "Magical Soul Schooling",
+      "soul_summary": "Perfection of the soul, conscious experience of the divine spark.",
+      "soul_mastery": "Completed when the divine and human nature are fully integrated.",
+      "body_title": "Magical Body Schooling",
+      "body_summary": "Complete spiritual-soul-physical integration of the body and the seal of initiation.",
+      "body_mastery": "Completed when every aspect of the complete initiation has been realized."
+    }
+  },
+  "practices": {
+    "s1_spirit_observe": {
+      "title": "Observation of Thoughts",
+      "description": "Sit comfortably in a chair or lie down. Relax your body completely, close your eyes. As a passive observer, follow the flow of your thoughts for 5-10 minutes – do not interfere, just watch from a neutral distance."
+    },
+    "s1_spirit_control": {
+      "title": "Thought Discipline",
+      "description": "Choose a single thought and hold it with full force. Energetically reject every intruding thought. Increase the time by 1 minute daily until you can hold a single thought for 10 minutes."
+    },
+    "s1_spirit_emptiness": {
+      "title": "Complete Thought Emptiness",
+      "description": "Lie down or sit comfortably. Relax your body completely. Energetically reject every arising thought. Goal: 10 minutes of complete mental silence without falling asleep."
+    },
+    "s1_spirit_journal": {
+      "title": "Magical Journal + Self-Criticism",
+      "description": "In the evening, record the day's results, successes and failures, durations. Make a plan for the next day. Practice self-criticism without judgment – be strict but fair with yourself."
+    },
+    "s1_soul_introspection": {
+      "title": "Introspection – Self-Knowledge",
+      "description": "Investigate every weakness, fault, and passion in your soul. Be strict and completely honest. Write everything down – nothing can remain hidden. This is the foundation of the soul mirror."
+    },
+    "s1_soul_mirror_negative": {
+      "title": "Black Soul Mirror",
+      "description": "Systematize your discovered faults according to the four elements (Fire/Water/Air/Earth) into three intensity levels: 1=coarsest and most frequent, 2=medium intensity, 3=rarely appearing weakness."
+    },
+    "s1_soul_mirror_positive": {
+      "title": "White Soul Mirror",
+      "description": "Similarly systematize your good qualities, strengths, and virtues. Same four elements and three levels. Be just as thorough as with the black mirror."
+    },
+    "s1_body_morning": {
+      "title": "Morning Body Awakening Routine",
+      "description": "After waking: dry brushing of the entire body until the skin reddens, then cold water washing and vigorous toweling. Brief morning exercise for flexibility and stimulating blood circulation."
+    },
+    "s1_body_breathing": {
+      "title": "Conscious Wish Breathing",
+      "description": "Sitting, relaxed: while inhaling, imagine that along with the air, the desired quality (health, peace, strength) also enters your body. Start with 7 breaths, increase by one each day."
+    },
+    "s1_body_eating": {
+      "title": "Conscious Food Intake",
+      "description": "Before eating, focus on a wish. Imagine that together with the food, your wish becomes part of your body. Eat slowly and consciously, free from disturbances."
+    },
+    "s1_body_water": {
+      "title": "Water Magic",
+      "description": "With every hand washing, imagine that along with the water you are also washing away your weaknesses. They depart with the flowing water. Optionally: bathe in water charged with a wish."
+    },
+    "s2_spirit_concentration": {
+      "title": "Concentration on Living Objects",
+      "description": "Place an object before you (candle flame, flower, stone). Close your eyes and vividly evoke its image, then open your eyes. Goal: to hold the image undisturbed for 5-10 minutes with closed eyes."
+    },
+    "s2_spirit_multi_sense": {
+      "title": "Multi-Sensory Concentration",
+      "description": "Imagine an object and simultaneously evoke its sight, sound, and touch. Gradually add sensory details and maintain the experience for as long as possible."
+    },
+    "s2_soul_balance": {
+      "title": "Astral-Magical Balance",
+      "description": "Examine the balance of elements in your soul based on the previously created mirror. Plan conscious steps to reduce the most severe weaknesses and work on them daily."
+    },
+    "s2_soul_character": {
+      "title": "Character Refinement",
+      "description": "Choose a negative quality from the black mirror. In every daily situation where this weakness would appear, consciously apply the opposite virtue. Keep records of progress."
+    },
+    "s2_body_breathing": {
+      "title": "Conscious Pore Breathing",
+      "description": "Sit comfortably. Imagine that not only your lungs, but your entire skin surface breathes through every pore. Feel that vital energy flows in from all directions."
+    },
+    "s2_body_posture": {
+      "title": "Conscious Posture",
+      "description": "Pay attention to your posture throughout the day. Stand, sit, walk consciously and upright. Body posture affects soul and spirit – dignified posture radiates power and confidence."
+    },
+    "s3_spirit_multi": {
+      "title": "Multi-Sensory Concentration",
+      "description": "Imagine an object (e.g., burning candle) and simultaneously maintain its sight, sound (crackling, popping), and warmth. Goal: to concentrate with all three senses simultaneously for 5 minutes."
+    },
+    "s3_spirit_landscape": {
+      "title": "Visualization of Landscapes and Places",
+      "description": "Imagine a familiar landscape or room in all its details. The visualization should be as vivid as if you were actually there. Try to maintain the image with open eyes."
+    },
+    "s3_soul_elements": {
+      "title": "Element Breathing Throughout the Body",
+      "description": "Through lung breathing and imagined pore breathing, draw the given element (Fire, Water, Air, Earth) into your entire body. Feel its characteristic effect: heat, cold, lightness, heaviness. Then dissolve it."
+    },
+    "s3_body_vitality": {
+      "title": "Vital Force Accumulation",
+      "description": "Breathe in vital energy with your entire body. Condense it at the heart center or solar plexus, then direct it to a specific body part or external goal. Intensify the force with breathing, then dissolve."
+    },
+    "s4_spirit_akasha": {
+      "title": "Akasha Meditation",
+      "description": "Sit comfortably and contemplate the infinite space of your inner emptiness. Akasha is the state before all elements – the feeling of eternity and omnipresence. Try to immerse yourself in this emptiness."
+    },
+    "s4_soul_accumulation": {
+      "title": "Element Accumulation",
+      "description": "Choose an element and condense it into a part of your body (e.g., palm, stomach). Feel the physical effect: for fire heat, for water cold, for air lightness, for earth heaviness. Then dissolve."
+    },
+    "s4_body_astral_senses": {
+      "title": "Development of Astral Senses",
+      "description": "Prepare the foundations of astral vision: with closed eyes imagine light, then try to perceive real astral phenomena. Pay heightened attention to inner perception processes."
+    },
+    "s5_spirit_external": {
+      "title": "External Element Accumulation",
+      "description": "Condense the element not only into your own body but also into the room space. Imagine the room becoming saturated with the energy of the selected element. Feel and observe the effect, then dissolve."
+    },
+    "s5_soul_clairvoyance": {
+      "title": "Development of Clairvoyance",
+      "description": "Practice astral vision with the help of a liquid condenser (eye compress), then without it. Attempt to 'see' nearby and distant things with your astral eye."
+    },
+    "s5_body_magnetism": {
+      "title": "Personal Magnetism",
+      "description": "Saturate your body with vital energy and vivid light in your imagination. Feel how this magnetic force radiates from you. Practice treating objects and persons with this energy."
+    },
+    "s6_spirit_projection": {
+      "title": "Consciousness Transference",
+      "description": "Imagine that your consciousness leaves your body and enters an object or an animal's body. Experience the perception of the other being. This is a preliminary exercise for astral travel – deepen gradually."
+    },
+    "s6_soul_astral_balance": {
+      "title": "Balance on the Astral Plane",
+      "description": "Deepen element magic on the astral plane. Examine the balance and state of your astral body. Work on higher levels of soul refinement, in harmony with the laws of the astral sphere."
+    },
+    "s6_body_room_charging": {
+      "title": "Room Saturation with Elements",
+      "description": "Fill the entire room with the element or vital energy of your choice. Your goal may be healing, protection, or inspiration. Feel how the space changes – if others sense it too, that is a good sign."
+    },
+    "s7_spirit_letter": {
+      "title": "Magical Letter and Condensers",
+      "description": "Create your first personal liquid condenser. Charge it with a wish and targeted intent. Study the gradual deepening of astral vision with their help."
+    },
+    "s7_soul_astral_travel": {
+      "title": "Astral Travel",
+      "description": "Consciously release your astral body from the physical. Visit predetermined locations in your astral body. After returning, record the experiences in your journal in detail."
+    },
+    "s7_body_condensers": {
+      "title": "Application of Liquid Condensers",
+      "description": "Apply the prepared condensers to strengthen astral senses. Apply them to your eyes as a compress and observe your inner experiences. Practice regularly."
+    },
+    "s8_spirit_beings": {
+      "title": "Evocation of Spiritual Beings",
+      "description": "Attempt to consciously communicate with spiritual beings on the astral plane. Be cautious and discerning: not every appearing spirit is benevolent. Ask for signs, test."
+    },
+    "s8_soul_intuition": {
+      "title": "Intuition and Oracles",
+      "description": "Deepen your intuitive abilities through symbolic vision and divination. Attempt to sense future events in meditation, then verify the results."
+    },
+    "s8_body_influence": {
+      "title": "Spiritual Influence on the Physical Plane",
+      "description": "Apply your magical force to physical healing, protection, and positive influence. Study the limits and ethical rules. Knowledge comes with power, together with responsibility."
+    },
+    "s9_spirit_kabbalah": {
+      "title": "Kabbalistic Methods",
+      "description": "Work with divine names and letters, their vibrations and magical power. Deepen the practical application of the Tetragrammaton and other Kabbalistic formulas."
+    },
+    "s9_soul_integration": {
+      "title": "Complete Soul Integration",
+      "description": "Deepen all previous soul work. Strive for complete balance of the four elements in your soul. Examine and refine the mirror – now at a much deeper level than in the first step."
+    },
+    "s9_body_mastery": {
+      "title": "Body as Magical Instrument",
+      "description": "Complete spiritual-soul mastery of the body. Every magical ability flows freely through the physical body as well. The body is healthy, flexible, and a perfect instrument of the spirit."
+    },
+    "s10_spirit_adept": {
+      "title": "Adeptship – Complete Spiritual Knowledge",
+      "description": "Synthesis of all learned principles, laws, and forces. The adept moves freely on the level of the four worlds, knows their laws and is their master. This is the spiritual goal of the tenth step."
+    },
+    "s10_soul_divine": {
+      "title": "Living the Divine Spark",
+      "description": "Perfection of the soul: complete integration of the divine and human nature. The adept knows where they came from, where they are, and where their path leads. Divine love is the foundation."
+    },
+    "s10_body_seal": {
+      "title": "The Seal of Initiation",
+      "description": "Perfect harmony of body, soul, and spirit – this is the seal of initiation. Every gate is open, every possibility realizable. This is not an endpoint, but a new beginning."
+    }
+  }
+}

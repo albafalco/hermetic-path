@@ -1,0 +1,460 @@
+{
+  "nav": {
+    "dashboard": "Übersicht",
+    "practice": "Übung",
+    "journal": "Tagebuch",
+    "mirror": "Elementspiegel",
+    "progress": "Fortschritt",
+    "steps": "Stufen"
+  },
+  "auth": {
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "loginButton": "Einloggen",
+    "registerButton": "Registrieren",
+    "noAccount": "Noch kein Konto?",
+    "hasAccount": "Bereits ein Konto?",
+    "tagline": "Digitaler Begleiter für Franz Bardons Einweihungssystem",
+    "logout": "Abmelden"
+  },
+  "dashboard": {
+    "greeting": "Willkommen",
+    "stepBadge": "Stufe {number}",
+    "dayCount": "Tag {count}",
+    "streak": "{count} Tage Serie",
+    "todayTitle": "Heutige Übungen",
+    "completed": "{done}/{total} abgeschlossen",
+    "writeJournal": "Tagebuch schreiben",
+    "openMirror": "Elementspiegel",
+    "viewProgress": "Fortschritt ansehen",
+    "noActivePractice": "Keine aktive Übung",
+    "startPractice": "Eine Stufe beginnen"
+  },
+  "steps": {
+    "title": "Die 10 Stufen",
+    "step": "Stufe {number}",
+    "locked": "Gesperrt",
+    "active": "Aktiv",
+    "complete": "Abgeschlossen",
+    "tracks": {
+      "spirit": "Geist",
+      "soul": "Seele",
+      "body": "Körper"
+    },
+    "masteryNote": "Meisterungsbedingung",
+    "markComplete": "Stufe als abgeschlossen markieren",
+    "duration": "Empfohlene Dauer",
+    "overview": "Übersicht",
+    "practices": "Übungen",
+    "backToSteps": "Zurück zu den Stufen"
+  },
+  "practice": {
+    "title": "Tägliche Übung",
+    "timer": "Timer",
+    "start": "Start",
+    "pause": "Pause",
+    "reset": "Zurücksetzen",
+    "selectDuration": "Dauer wählen",
+    "minutes": "{count} Min.",
+    "customMinutes": "Eigene Minuten",
+    "completed": "Abgeschlossen!",
+    "sessionSaved": "Sitzung gespeichert",
+    "frequency": {
+      "morning": "Morgen",
+      "evening": "Abend",
+      "both": "Morgen & Abend",
+      "daily": "Täglich",
+      "anytime": "Jederzeit"
+    },
+    "markDone": "Als erledigt markieren",
+    "timerRequired": "Timer erforderlich",
+    "todayPractices": "Heutige Übungen"
+  },
+  "journal": {
+    "title": "Magisches Tagebuch",
+    "newEntry": "Neuer Eintrag",
+    "noEntries": "Noch keine Tagebucheinträge",
+    "mood": {
+      "excellent": "Ausgezeichnet",
+      "good": "Gut",
+      "neutral": "Neutral",
+      "difficult": "Schwierig",
+      "dark": "Dunkel"
+    },
+    "fields": {
+      "date": "Datum",
+      "step": "Stufe",
+      "track": "Linie",
+      "trackGeneral": "Allgemein",
+      "title": "Titel (optional)",
+      "content": "Eintragstext",
+      "mood": "Stimmung"
+    },
+    "save": "Speichern",
+    "search": "Im Tagebuch suchen...",
+    "deleteConfirm": "Möchten Sie diesen Eintrag wirklich löschen?",
+    "saved": "Eintrag gespeichert",
+    "deleted": "Eintrag gelöscht"
+  },
+  "mirror": {
+    "title": "Elementspiegel",
+    "subtitle": "Seelische Eigenschaften nach den vier Elementen",
+    "elements": {
+      "fire": "Feuer",
+      "water": "Wasser",
+      "air": "Luft",
+      "earth": "Erde",
+      "undefined": "Undefiniert"
+    },
+    "polarity": {
+      "negative": "Schwarzer Spiegel (Schwächen)",
+      "positive": "Weißer Spiegel (Tugenden)"
+    },
+    "intensity": "Intensität",
+    "resolved": "Gelöst",
+    "addTrait": "Eigenschaft hinzufügen",
+    "noTraits": "Noch keine Einträge",
+    "dominantElement": "Dominantes Element",
+    "modal": {
+      "title": "Neue Eigenschaft",
+      "element": "Element",
+      "polarity": "Polarität",
+      "trait": "Eigenschaftsbeschreibung",
+      "intensityLabel": "Stärke (1=stärkste, 3=schwächste)",
+      "save": "Hinzufügen"
+    },
+    "saved": "Eigenschaft hinzugefügt",
+    "resolvedMsg": "Eigenschaft gelöst",
+    "deleted": "Eigenschaft gelöscht"
+  },
+  "progress": {
+    "title": "Fortschritt",
+    "overallProgress": "Gesamtfortschritt",
+    "longestStreak": "Längste Serie",
+    "totalSessions": "Gesamtsitzungen",
+    "totalMinutes": "Gesamte Meditationsminuten",
+    "days": "{count} Tage",
+    "activityTitle": "Aktivitätskalender",
+    "spiritTrack": "Geistlinie",
+    "soulTrack": "Seelenlinie",
+    "bodyTrack": "Körperlinie"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "back": "Zurück",
+    "next": "Weiter",
+    "language": "Sprache",
+    "yes": "Ja",
+    "no": "Nein",
+    "close": "Schließen"
+  },
+  "steps_data": {
+    "s1": {
+      "title": "Erste Stufe",
+      "overview": "Legen der Grundlagen des Weges: Gedankenkontrolle, Selbsterkenntnis und bewusstes Körpermanagement.",
+      "spirit_title": "Magische Geistesschulung",
+      "spirit_summary": "Beobachtung, Disziplinierung und vollständige Beherrschung der Gedanken.",
+      "spirit_mastery": "Abgeschlossen, wenn ein einzelner Gedanke 10 Minuten gehalten werden kann, dann vollständige Gedankenleere.",
+      "soul_title": "Magische Seelenschulung",
+      "soul_summary": "Selbsterkenntnis und Erstellung einer Seelenkarte nach den vier Elementen.",
+      "soul_mastery": "Abgeschlossen, wenn der weiße und schwarze Seelenspiegel vollständig und detailliert mit drei Intensitätsstufen ist.",
+      "body_title": "Magische Körperschulung",
+      "body_summary": "Bewusstes Management des physischen Körpers, Atmung und magische Anwendung von Wasser.",
+      "body_mastery": "Abgeschlossen, wenn all dies zur täglichen Routine geworden ist."
+    },
+    "s2": {
+      "title": "Zweite Stufe",
+      "overview": "Verständnis von Autosuggestion und dem Unterbewusstsein, tiefere Konzentration, Elementeatmung.",
+      "spirit_title": "Magische Geistesschulung",
+      "spirit_summary": "Entwicklung tiefer Konzentrationsfähigkeiten mit mehreren Sinnen gleichzeitig.",
+      "spirit_mastery": "Abgeschlossen, wenn die Konzentration auf lebende und leblose Objekte 10 Minuten ungestört aufrechterhalten werden kann.",
+      "soul_title": "Magische Seelenschulung",
+      "soul_summary": "Astral-magisches Gleichgewicht und Charakterveredelung nach Elementen.",
+      "soul_mastery": "Abgeschlossen, wenn die schwerwiegendsten Schwächen durch bewusste Arbeit reduziert werden können.",
+      "body_title": "Magische Körperschulung",
+      "body_summary": "Bewusste Porenatmung und Körperbeherrschung im täglichen Leben.",
+      "body_mastery": "Abgeschlossen, wenn Atem- und Haltungsübungen automatisch geworden sind."
+    },
+    "s3": {
+      "title": "Dritte Stufe",
+      "overview": "Wissen, wollen, wagen, schweigen – die vier Grundpfeiler der Magie. Elementeatmung und Vitalenergie-Arbeit.",
+      "spirit_title": "Magische Geistesschulung",
+      "spirit_summary": "Konzentration mit mehreren Sinnen gleichzeitig auf Objekte, Landschaften und Lebewesen.",
+      "spirit_mastery": "Abgeschlossen, wenn jedes Objekt oder jede Szene 5 Minuten lang mit offenen Augen visualisiert werden kann.",
+      "soul_title": "Magische Seelenschulung",
+      "soul_summary": "Elementeatmung durch den gesamten Körper – bewusstes Einlassen und Erleben der vier Elemente.",
+      "soul_mastery": "Abgeschlossen, wenn die Wirkungen der Elemente ohne Konzentration physisch spürbar sind.",
+      "body_title": "Magische Körperschulung",
+      "body_summary": "Vitalenergieansammlung und Grundlagen des Biomagnetismus.",
+      "body_mastery": "Abgeschlossen, wenn Vitalenergie im eigenen Körper gelenkt und auf externe Ziele übertragen werden kann."
+    },
+    "s4": {
+      "title": "Vierte Stufe",
+      "overview": "Akasha-Meditation, Elementeakkumulation, Entwicklung astralischer Sinne.",
+      "spirit_title": "Magische Geistesschulung",
+      "spirit_summary": "Verständnis des Akasha-Prinzips, Meditation über Leere und Erweiterung des Bewusstseins.",
+      "spirit_mastery": "Abgeschlossen, wenn die Akasha-Meditation mindestens 10 Minuten in einem tiefen Zustand aufrechterhalten werden kann.",
+      "soul_title": "Magische Seelenschulung",
+      "soul_summary": "Akkumulation und Kondensation von Elementen im eigenen Körper.",
+      "soul_mastery": "Abgeschlossen, wenn alle vier Elemente mit spürbaren physischen Auswirkungen in den Körper geladen werden können.",
+      "body_title": "Magische Körperschulung",
+      "body_summary": "Entwicklung astralischer Sinne (Sehen, Hören, Fühlen) durch subtile Methoden.",
+      "body_mastery": "Abgeschlossen, wenn die astralischen Sinne zumindest auf einem grundlegenden Niveau funktionieren."
+    },
+    "s5": {
+      "title": "Fünfte Stufe",
+      "overview": "Externe Anhäufung von Elementen, Pneuma-Magie, magische Hilfsmittel.",
+      "spirit_title": "Magische Geistesschulung",
+      "spirit_summary": "Verdichtung und Auflösung von Elementen im äußeren Raum.",
+      "spirit_mastery": "Abgeschlossen, wenn Elemente in einem äußeren Zimmer von anderen wahrgenommen werden können.",
+      "soul_title": "Magische Seelenschulung",
+      "soul_summary": "Vertiefung astralischer Sinne, Entwicklung von Hellsehen und Hellhören.",
+      "soul_mastery": "Abgeschlossen, wenn astralisches Sehen auf elementarer Ebene ohne Medium erreichbar ist.",
+      "body_title": "Magische Körperschulung",
+      "body_summary": "Licht- und Vitalenergieansammlung, Imprägnierung, persönlicher Magnetismus.",
+      "body_mastery": "Abgeschlossen, wenn magnetische Kraft auf Objekte und Personen angewendet werden kann."
+    },
+    "s6": {
+      "title": "Sechste Stufe",
+      "overview": "Synthese der magischen Entwicklung: Vorbereitung für Astralreisen, Vertiefung der Elementemagie.",
+      "spirit_title": "Magische Geistesschulung",
+      "spirit_summary": "Grundlage für Astralreisen, Praktiken der Bewusstseinsübertragung.",
+      "spirit_mastery": "Abgeschlossen, wenn das Bewusstsein vorübergehend in ein anderes Objekt oder Wesen versetzt werden kann.",
+      "soul_title": "Magische Seelenschulung",
+      "soul_summary": "Elementemagie auf der Astralebene, feines geistiges und seelisches Gleichgewicht.",
+      "soul_mastery": "Abgeschlossen, wenn die einzigartigen Merkmale der Astralebene erkennbar und handhabbar sind.",
+      "body_title": "Magische Körperschulung",
+      "body_summary": "Raumsättigung mit Elementen, Lichtkonzentratoren, persönliches magisches Kraftfeld.",
+      "body_mastery": "Abgeschlossen, wenn das Kraftfeld von anderen wahrgenommen wird."
+    },
+    "s7": {
+      "title": "Siebte Stufe",
+      "overview": "Magischer Brief, Flüssigkondensatoren, Vorausschau und Astralreisen.",
+      "spirit_title": "Magische Geistesschulung",
+      "spirit_summary": "Erstellung magischer Briefe und flüssiger Kondensatoren, Vertiefung der Astralvision.",
+      "spirit_mastery": "Abgeschlossen, wenn magische Hilfsmittel zielgerichtet und zuverlässig funktionieren.",
+      "soul_title": "Magische Seelenschulung",
+      "soul_summary": "Bewusste Realisierung von Astralreisen, Kontrolle des Astralkörpers.",
+      "soul_mastery": "Abgeschlossen, wenn der Astralkörper unabhängig vom physischen funktionieren kann.",
+      "body_title": "Magische Körperschulung",
+      "body_summary": "Erstellung und Anwendung flüssiger Kondensatoren, Stärkung astralischer Sinne.",
+      "body_mastery": "Abgeschlossen, wenn Kondensatoren mit spürbarer Wirkung angewendet werden können."
+    },
+    "s8": {
+      "title": "Achte Stufe",
+      "overview": "Beschwörung geistiger Wesen, magische Helfer, Orakel und Wahrsagung.",
+      "spirit_title": "Magische Geistesschulung",
+      "spirit_summary": "Bewusste Beschwörung geistiger Wesen und Kommunikation mit ihnen.",
+      "spirit_mastery": "Abgeschlossen, wenn zuverlässige bidirektionale Kommunikation mit geistigen Wesen hergestellt werden kann.",
+      "soul_title": "Magische Seelenschulung",
+      "soul_summary": "Feines geistiges Wahrnehmen: Intuition, symbolisches Sehen, Orakel.",
+      "soul_mastery": "Abgeschlossen, wenn Intuition für wichtige Entscheidungen zuverlässig angewendet werden kann.",
+      "body_title": "Magische Körperschulung",
+      "body_summary": "Geistiger Einfluss auf die physische Ebene, Kraftfeldarbeit und schützende magische Methoden.",
+      "body_mastery": "Abgeschlossen, wenn die physischen Auswirkungen geistiger Kraft zuverlässig erreicht werden können."
+    },
+    "s9": {
+      "title": "Neunte Stufe",
+      "overview": "Vollständige Integration magischer Kräfte, Kabbalistische Methoden.",
+      "spirit_title": "Magische Geistesschulung",
+      "spirit_summary": "Kabbalistische Methoden, magische Anwendung göttlicher Namen und Buchstaben.",
+      "spirit_mastery": "Abgeschlossen, wenn Kabbalistische Kräfte bewusst und zielgerichtet angewendet werden können.",
+      "soul_title": "Magische Seelenschulung",
+      "soul_summary": "Vollständiges Gleichgewicht und Integration der Seele auf allen Ebenen.",
+      "soul_mastery": "Abgeschlossen, wenn alle Elemente in harmonischem Gleichgewicht in der Seele sind.",
+      "body_title": "Magische Körperschulung",
+      "body_summary": "Vervollkommnung des Körpers als magisches Instrument, maximaler Einsatz physischer Kräfte.",
+      "body_mastery": "Abgeschlossen, wenn der Körper unter allen Umständen als vollkommenes magisches Instrument funktioniert."
+    },
+    "s10": {
+      "title": "Zehnte Stufe",
+      "overview": "Die Vollständigkeit der Einweihung: Adeptschaft, magische Herrschaft über die vier Welten.",
+      "spirit_title": "Magische Geistesschulung",
+      "spirit_summary": "Vollständiges magisches Wissen der Adeptschaft, angewendet auf höchsten Ebenen.",
+      "spirit_mastery": "Abgeschlossen, wenn jedes magische Gesetz und jede Kraft vollständig unter der Kontrolle des Willens steht.",
+      "soul_title": "Magische Seelenschulung",
+      "soul_summary": "Vollkommenheit der Seele, bewusstes Erleben des göttlichen Funkens.",
+      "soul_mastery": "Abgeschlossen, wenn die göttliche und menschliche Natur vollständig integriert sind.",
+      "body_title": "Magische Körperschulung",
+      "body_summary": "Vollständige geistig-seelisch-physische Integration des Körpers und das Siegel der Einweihung.",
+      "body_mastery": "Abgeschlossen, wenn jeder Aspekt der vollständigen Einweihung verwirklicht wurde."
+    }
+  },
+  "practices": {
+    "s1_spirit_observe": {
+      "title": "Beobachtung der Gedanken",
+      "description": "Sitz bequem in einem Stuhl oder leg dich hin. Entspanne deinen Körper vollständig, schließe die Augen. Als passiver Beobachter folge dem Gedankenfluss für 5-10 Minuten – greife nicht ein, beobachte nur aus neutraler Distanz."
+    },
+    "s1_spirit_control": {
+      "title": "Gedankendisziplin",
+      "description": "Wähle einen einzigen Gedanken und halte ihn mit voller Kraft. Weise jeden eindringenden Gedanken energisch ab. Erhöhe die Zeit täglich um 1 Minute, bis du einen Gedanken 10 Minuten lang halten kannst."
+    },
+    "s1_spirit_emptiness": {
+      "title": "Vollständige Gedankenleere",
+      "description": "Leg dich hin oder sitz bequem. Entspanne deinen Körper vollständig. Weise jeden aufkommenden Gedanken energisch ab. Ziel: 10 Minuten vollständige geistige Stille ohne einzuschlafen."
+    },
+    "s1_spirit_journal": {
+      "title": "Magisches Tagebuch + Selbstkritik",
+      "description": "Zeichne abends die Tagesergebnisse, Erfolge und Misserfolge, Dauern auf. Erstelle einen Plan für den nächsten Tag. Übe Selbstkritik ohne Urteil – sei streng aber gerecht mit dir selbst."
+    },
+    "s1_soul_introspection": {
+      "title": "Introspektion – Selbsterkenntnis",
+      "description": "Erforsche jede Schwäche, jeden Fehler und jede Leidenschaft in deiner Seele. Sei streng und vollständig ehrlich. Schreib alles auf – nichts darf verborgen bleiben. Dies ist die Grundlage des Seelenspiegels."
+    },
+    "s1_soul_mirror_negative": {
+      "title": "Schwarzer Seelenspiegel",
+      "description": "Systematisiere deine entdeckten Fehler nach den vier Elementen (Feuer/Wasser/Luft/Erde) in drei Intensitätsstufen: 1=gröbste und häufigste, 2=mittlere Intensität, 3=selten auftretende Schwäche."
+    },
+    "s1_soul_mirror_positive": {
+      "title": "Weißer Seelenspiegel",
+      "description": "Systematisiere ebenso deine guten Eigenschaften, Stärken und Tugenden. Gleiche vier Elemente und drei Stufen. Sei genauso gründlich wie beim schwarzen Spiegel."
+    },
+    "s1_body_morning": {
+      "title": "Morgendliche Körperweck-Routine",
+      "description": "Nach dem Aufwachen: Trockenbürsten des gesamten Körpers bis zur Hautrötung, dann Kaltwaschen und kräftiges Abreiben. Kurze Morgengymnastik für Flexibilität und Anregung der Durchblutung."
+    },
+    "s1_body_breathing": {
+      "title": "Bewusstes Wunschatmen",
+      "description": "Sitzend, entspannt: Beim Einatmen stelle dir vor, dass zusammen mit der Luft auch die gewünschte Eigenschaft (Gesundheit, Frieden, Kraft) in deinen Körper eindringt. Beginne mit 7 Atemzügen, täglich um einen erhöhen."
+    },
+    "s1_body_eating": {
+      "title": "Bewusste Nahrungsaufnahme",
+      "description": "Konzentriere dich vor dem Essen auf einen Wunsch. Stelle dir vor, dass zusammen mit der Nahrung auch dein Wunsch Teil deines Körpers wird. Iss langsam und bewusst, frei von Ablenkungen."
+    },
+    "s1_body_water": {
+      "title": "Wassermagie",
+      "description": "Stelle dir bei jedem Händewaschen vor, dass du zusammen mit dem Wasser auch deine Schwächen abwäschst. Sie gehen mit dem fließenden Wasser fort. Optional: Bade in mit einem Wunsch aufgeladenem Wasser."
+    },
+    "s2_spirit_concentration": {
+      "title": "Konzentration auf lebende Objekte",
+      "description": "Stelle ein Objekt vor dich (Kerzenflamme, Blume, Stein). Schließe die Augen und rufe sein Bild plastisch hervor, dann öffne die Augen. Ziel: das Bild 5-10 Minuten ungestört mit geschlossenen Augen halten."
+    },
+    "s2_spirit_multi_sense": {
+      "title": "Multisensorische Konzentration",
+      "description": "Stelle dir ein Objekt vor und rufe gleichzeitig seinen Anblick, Klang und Berührung hervor. Füge schrittweise sensorische Details hinzu und halte das Erlebnis so lange wie möglich aufrecht."
+    },
+    "s2_soul_balance": {
+      "title": "Astral-magisches Gleichgewicht",
+      "description": "Untersuche das Gleichgewicht der Elemente in deiner Seele anhand des zuvor erstellten Spiegels. Plane bewusste Schritte zur Reduzierung der schwerwiegendsten Schwächen und arbeite täglich daran."
+    },
+    "s2_soul_character": {
+      "title": "Charakterveredelung",
+      "description": "Wähle eine negative Eigenschaft aus dem schwarzen Spiegel. In jeder täglichen Situation, wo diese Schwäche auftreten würde, wende bewusst die entgegengesetzte Tugend an. Führe Aufzeichnungen über Fortschritte."
+    },
+    "s2_body_breathing": {
+      "title": "Bewusste Porenatmung",
+      "description": "Sitz bequem. Stelle dir vor, dass nicht nur deine Lungen, sondern deine gesamte Hautoberfläche durch jede Pore atmet. Fühle, wie Lebensenergie aus allen Richtungen einströmt."
+    },
+    "s2_body_posture": {
+      "title": "Bewusste Körperhaltung",
+      "description": "Achte tagsüber auf deine Körperhaltung. Steh, sitz, geh bewusst und aufrecht. Körperhaltung wirkt auf Seele und Geist zurück – würdevolle Haltung strahlt Kraft und Vertrauen aus."
+    },
+    "s3_spirit_multi": {
+      "title": "Multisensorische Konzentration",
+      "description": "Stelle dir ein Objekt vor (z.B. brennende Kerze) und halte gleichzeitig seinen Anblick, Klang (Knistern, Prasseln) und Wärme aufrecht. Ziel: 5 Minuten mit allen drei Sinnen gleichzeitig konzentrieren."
+    },
+    "s3_spirit_landscape": {
+      "title": "Visualisierung von Landschaften und Orten",
+      "description": "Stelle dir eine bekannte Landschaft oder einen Raum in allen Details vor. Die Visualisierung soll so lebendig sein, als wärst du wirklich dort. Versuche das Bild auch mit offenen Augen aufrechtzuerhalten."
+    },
+    "s3_soul_elements": {
+      "title": "Elementeatmung durch den ganzen Körper",
+      "description": "Durch Lungenatmung und vorgestellte Porenatmung ziehe das gegebene Element (Feuer, Wasser, Luft, Erde) in deinen gesamten Körper. Fühle seine charakteristische Wirkung: Wärme, Kälte, Leichtigkeit, Schwere. Dann auflösen."
+    },
+    "s3_body_vitality": {
+      "title": "Vitalenergieansammlung",
+      "description": "Atme mit deinem gesamten Körper Lebensenergie ein. Verdichte sie am Herzzentrum oder Solarplexus, dann richte sie auf einen bestimmten Körperteil oder ein externes Ziel. Intensiviere die Kraft durch Atmung, dann auflösen."
+    },
+    "s4_spirit_akasha": {
+      "title": "Akasha-Meditation",
+      "description": "Sitz bequem und betrachte den unendlichen Raum deiner inneren Leere. Akasha ist der Zustand vor allen Elementen – das Gefühl der Ewigkeit und Allgegenwart. Versuche in diese Leere einzutauchen."
+    },
+    "s4_soul_accumulation": {
+      "title": "Elementeakkumulation",
+      "description": "Wähle ein Element und verdichte es in einen Teil deines Körpers (z.B. Handfläche, Magen). Fühle die physische Wirkung: bei Feuer Wärme, bei Wasser Kälte, bei Luft Leichtigkeit, bei Erde Schwere. Dann auflösen."
+    },
+    "s4_body_astral_senses": {
+      "title": "Entwicklung astralischer Sinne",
+      "description": "Bereite die Grundlagen des Astrallichtsehens vor: stelle dir mit geschlossenen Augen Licht vor, dann versuche echte astralische Phänomene wahrzunehmen. Achte verstärkt auf innere Wahrnehmungsprozesse."
+    },
+    "s5_spirit_external": {
+      "title": "Externe Elementeakkumulation",
+      "description": "Verdichte das Element nicht nur in deinen eigenen Körper, sondern auch in den Raumraum. Stelle dir vor, dass der Raum mit der Energie des ausgewählten Elements gesättigt wird. Fühle und beobachte die Wirkung, dann auflösen."
+    },
+    "s5_soul_clairvoyance": {
+      "title": "Entwicklung des Hellsehens",
+      "description": "Übe astralisches Sehen mit Hilfe eines Flüssigkondensators (Augenumschlag), dann auch ohne. Versuche nahe und entfernte Dinge mit deinem Astralauge zu 'sehen'."
+    },
+    "s5_body_magnetism": {
+      "title": "Persönlicher Magnetismus",
+      "description": "Sättige deinen Körper in der Vorstellung mit Lebensenergie und leuchtendem Licht. Fühle, wie diese magnetische Kraft aus dir ausstrahlt. Übe die Behandlung von Objekten und Personen mit dieser Energie."
+    },
+    "s6_spirit_projection": {
+      "title": "Bewusstseinsübertragung",
+      "description": "Stelle dir vor, dass dein Bewusstsein deinen Körper verlässt und in ein Objekt oder den Körper eines Tieres eintritt. Erlebe die Wahrnehmung des anderen Wesens. Dies ist eine Vorübung für Astralreisen – vertiefen Sie allmählich."
+    },
+    "s6_soul_astral_balance": {
+      "title": "Gleichgewicht auf der Astralebene",
+      "description": "Vertiefe Elementemagie auf der Astralebene. Untersuche das Gleichgewicht und den Zustand deines Astralkörpers. Arbeite auf höheren Ebenen der Seelenverfeinerung, im Einklang mit den Gesetzen der Astralsphäre."
+    },
+    "s6_body_room_charging": {
+      "title": "Raumsättigung mit Elementen",
+      "description": "Fülle den gesamten Raum mit dem Element oder der Lebensenergie deiner Wahl. Dein Ziel kann Heilung, Schutz oder Inspiration sein. Fühle, wie sich der Raum verändert – wenn andere es auch spüren, ist das ein gutes Zeichen."
+    },
+    "s7_spirit_letter": {
+      "title": "Magischer Brief und Kondensatoren",
+      "description": "Erstelle deinen ersten persönlichen Flüssigkondensator. Lade ihn mit einem Wunsch und gezielter Absicht auf. Studiere die schrittweise Vertiefung des Astrallichtsehens mit ihrer Hilfe."
+    },
+    "s7_soul_astral_travel": {
+      "title": "Astralreise",
+      "description": "Lass deinen Astralkörper bewusst aus dem physischen heraus. Besuche vorher festgelegte Orte in deinem Astralkörper. Zeichne nach der Rückkehr die Erlebnisse detailliert im Tagebuch auf."
+    },
+    "s7_body_condensers": {
+      "title": "Anwendung von Flüssigkondensatoren",
+      "description": "Wende die vorbereiteten Kondensatoren zur Stärkung astralischer Sinne an. Lege sie als Umschlag auf die Augen und beobachte innere Erlebnisse. Übe regelmäßig."
+    },
+    "s8_spirit_beings": {
+      "title": "Beschwörung geistiger Wesen",
+      "description": "Versuche bewusst mit geistigen Wesen auf der Astralebene zu kommunizieren. Sei vorsichtig und unterscheidend: nicht jeder erscheinende Geist ist wohlwollend. Bitte um Zeichen, teste."
+    },
+    "s8_soul_intuition": {
+      "title": "Intuition und Orakel",
+      "description": "Vertiefen Sie Ihre intuitiven Fähigkeiten durch symbolisches Sehen und Wahrsagung. Versuche zukünftige Ereignisse in der Meditation zu spüren, dann die Ergebnisse zu verifizieren."
+    },
+    "s8_body_influence": {
+      "title": "Geistiger Einfluss auf die physische Ebene",
+      "description": "Wende deine magische Kraft auf physische Heilung, Schutz und positive Beeinflussung an. Studiere die Grenzen und ethischen Regeln. Wissen kommt mit Macht, zusammen mit Verantwortung."
+    },
+    "s9_spirit_kabbalah": {
+      "title": "Kabbalistische Methoden",
+      "description": "Arbeite mit göttlichen Namen und Buchstaben, ihren Schwingungen und magischer Kraft. Vertiefen die praktische Anwendung des Tetragrammatons und anderer kabbalistischer Formeln."
+    },
+    "s9_soul_integration": {
+      "title": "Vollständige Seelenintegration",
+      "description": "Vertiefen alle bisherigen Seelenarbeiten. Strebe nach vollständigem Gleichgewicht der vier Elemente in deiner Seele. Untersuche und verfeinere den Spiegel – jetzt auf einem viel tieferen Niveau als in der ersten Stufe."
+    },
+    "s9_body_mastery": {
+      "title": "Körper als magisches Instrument",
+      "description": "Vollständige geistig-seelische Beherrschung des Körpers. Jede magische Fähigkeit fließt auch durch den physischen Körper frei. Der Körper ist gesund, flexibel und vollkommenes Instrument des Geistes."
+    },
+    "s10_spirit_adept": {
+      "title": "Adeptschaft – Vollständiges geistiges Wissen",
+      "description": "Synthese aller gelernten Prinzipien, Gesetze und Kräfte. Der Adept bewegt sich frei auf der Ebene der vier Welten, kennt ihre Gesetze und ist ihr Meister. Dies ist das geistige Ziel der zehnten Stufe."
+    },
+    "s10_soul_divine": {
+      "title": "Den göttlichen Funken leben",
+      "description": "Vollkommenheit der Seele: vollständige Integration der göttlichen und menschlichen Natur. Der Adept weiß, woher er kam, wo er ist und wohin sein Weg führt. Göttliche Liebe ist die Grundlage."
+    },
+    "s10_body_seal": {
+      "title": "Das Siegel der Einweihung",
+      "description": "Vollkommene Harmonie von Körper, Seele und Geist – das ist das Siegel der Einweihung. Jedes Tor ist offen, jede Möglichkeit realisierbar. Dies ist kein Endpunkt, sondern ein neuer Anfang."
+    }
+  }
+}

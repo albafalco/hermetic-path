@@ -1,0 +1,460 @@
+{
+  "nav": {
+    "dashboard": "Főoldal",
+    "practice": "Gyakorlás",
+    "journal": "Napló",
+    "mirror": "Elem-tükör",
+    "progress": "Haladás",
+    "steps": "Fokozatok"
+  },
+  "auth": {
+    "login": "Bejelentkezés",
+    "register": "Regisztráció",
+    "email": "E-mail cím",
+    "password": "Jelszó",
+    "loginButton": "Belépés",
+    "registerButton": "Regisztráció",
+    "noAccount": "Még nincs fiókod?",
+    "hasAccount": "Már van fiókod?",
+    "tagline": "Franz Bardon beavatási rendszer digitális kísérője",
+    "logout": "Kijelentkezés"
+  },
+  "dashboard": {
+    "greeting": "Üdvözöljük",
+    "stepBadge": "{number}. Fokozat",
+    "dayCount": "{count}. nap",
+    "streak": "{count} napos sorozat",
+    "todayTitle": "Mai gyakorlások",
+    "completed": "{done}/{total} elvégezve",
+    "writeJournal": "Napló írása",
+    "openMirror": "Elem-tükör",
+    "viewProgress": "Haladás megtekintése",
+    "noActivePractice": "Nincs aktív gyakorlat",
+    "startPractice": "Kezdj el egy fokozatot"
+  },
+  "steps": {
+    "title": "A 10 Fokozat",
+    "step": "{number}. Fokozat",
+    "locked": "Zárolt",
+    "active": "Aktív",
+    "complete": "Teljesítve",
+    "tracks": {
+      "spirit": "Szellem",
+      "soul": "Lélek",
+      "body": "Test"
+    },
+    "masteryNote": "Teljesítés feltétele",
+    "markComplete": "Fokozat teljesítve",
+    "duration": "Ajánlott időtartam",
+    "overview": "Áttekintés",
+    "practices": "Gyakorlatok",
+    "backToSteps": "Vissza a fokozatokhoz"
+  },
+  "practice": {
+    "title": "Napi Gyakorlás",
+    "timer": "Időzítő",
+    "start": "Indítás",
+    "pause": "Szünet",
+    "reset": "Visszaállítás",
+    "selectDuration": "Időtartam választása",
+    "minutes": "{count} perc",
+    "customMinutes": "Egyedi perc",
+    "completed": "Elvégezve!",
+    "sessionSaved": "Gyakorlat mentve",
+    "frequency": {
+      "morning": "Reggel",
+      "evening": "Este",
+      "both": "Reggel és este",
+      "daily": "Naponta",
+      "anytime": "Bármikor"
+    },
+    "markDone": "Elvégezve jelölés",
+    "timerRequired": "Időzítő szükséges",
+    "todayPractices": "Mai gyakorlatok"
+  },
+  "journal": {
+    "title": "Mágikus Napló",
+    "newEntry": "Új bejegyzés",
+    "noEntries": "Még nincs napló bejegyzés",
+    "mood": {
+      "excellent": "Kiváló",
+      "good": "Jó",
+      "neutral": "Semleges",
+      "difficult": "Nehéz",
+      "dark": "Sötét"
+    },
+    "fields": {
+      "date": "Dátum",
+      "step": "Fokozat",
+      "track": "Vonal",
+      "trackGeneral": "Általános",
+      "title": "Cím (opcionális)",
+      "content": "Bejegyzés szövege",
+      "mood": "Hangulat"
+    },
+    "save": "Mentés",
+    "search": "Keresés a naplóban...",
+    "deleteConfirm": "Biztosan törlöd ezt a bejegyzést?",
+    "saved": "Bejegyzés mentve",
+    "deleted": "Bejegyzés törölve"
+  },
+  "mirror": {
+    "title": "Elem-tükör",
+    "subtitle": "Lelki tulajdonságok a négy elem szerint",
+    "elements": {
+      "fire": "Tűz",
+      "water": "Víz",
+      "air": "Levegő",
+      "earth": "Föld",
+      "undefined": "Meghatározatlan"
+    },
+    "polarity": {
+      "negative": "Fekete tükör (gyengeségek)",
+      "positive": "Fehér tükör (erények)"
+    },
+    "intensity": "Intenzitás",
+    "resolved": "Megoldva",
+    "addTrait": "Tulajdonság hozzáadása",
+    "noTraits": "Még nincs bejegyzés",
+    "dominantElement": "Domináns elem",
+    "modal": {
+      "title": "Új tulajdonság",
+      "element": "Elem",
+      "polarity": "Polaritás",
+      "trait": "Tulajdonság leírása",
+      "intensityLabel": "Erősség (1=legerősebb, 3=leggyengébb)",
+      "save": "Hozzáadás"
+    },
+    "saved": "Tulajdonság hozzáadva",
+    "resolvedMsg": "Tulajdonság megoldva",
+    "deleted": "Tulajdonság törölve"
+  },
+  "progress": {
+    "title": "Haladás",
+    "overallProgress": "Összesített haladás",
+    "longestStreak": "Leghosszabb sorozat",
+    "totalSessions": "Összes session",
+    "totalMinutes": "Összes meditációs perc",
+    "days": "{count} nap",
+    "activityTitle": "Aktivitás naptár",
+    "spiritTrack": "Szellem vonal",
+    "soulTrack": "Lélek vonal",
+    "bodyTrack": "Test vonal"
+  },
+  "common": {
+    "loading": "Betöltés...",
+    "error": "Hiba történt",
+    "save": "Mentés",
+    "cancel": "Mégse",
+    "delete": "Törlés",
+    "edit": "Szerkesztés",
+    "back": "Vissza",
+    "next": "Következő",
+    "language": "Nyelv",
+    "yes": "Igen",
+    "no": "Nem",
+    "close": "Bezárás"
+  },
+  "steps_data": {
+    "s1": {
+      "title": "Első Fokozat",
+      "overview": "Az út alapjainak lefektetése: gondolatkontroll, önmegismerés és a test tudatos kezelése.",
+      "spirit_title": "Mágikus Szellemiskolázás",
+      "spirit_summary": "A gondolatok megfigyelése, fegyelmezése és teljes uralása.",
+      "spirit_mastery": "Teljesítve, ha 10 percig fenntartható az egyetlen gondolat, majd a teljes gondolatüresség.",
+      "soul_title": "Mágikus Lélekiskolázás",
+      "soul_summary": "Önmegismerés és a négy elem szerinti lelki térkép elkészítése.",
+      "soul_mastery": "Teljesítve, ha a fehér és fekete lelki tükör teljes és részletes, három intenzitási szinttel.",
+      "body_title": "Mágikus Testiskolázás",
+      "body_summary": "Az anyagi test tudatos kezelése, légzés és a víz mágikus alkalmazása.",
+      "body_mastery": "Teljesítve, ha mindezek napi rutinná váltak."
+    },
+    "s2": {
+      "title": "Második Fokozat",
+      "overview": "Az autoszuggesztió és a tudatalatti tudat megismerése, mélyebb koncentráció, elemek légzése.",
+      "spirit_title": "Mágikus Szellemiskolázás",
+      "spirit_summary": "Mély koncentrációs képességek fejlesztése több érzékkel egyszerre.",
+      "spirit_mastery": "Teljesítve, ha az élő és élettelen tárgyakra 10 percig zavartalanul lehet koncentrálni.",
+      "soul_title": "Mágikus Lélekiskolázás",
+      "soul_summary": "Asztrál-mágikus egyensúly és jellemnemesítés az elemek szerint.",
+      "soul_mastery": "Teljesítve, ha a legsúlyosabb gyengeségek tudatos munkával csökkenthetők.",
+      "body_title": "Mágikus Testiskolázás",
+      "body_summary": "Tudatos póruslégzés és a test uralása a mindennapi életben.",
+      "body_mastery": "Teljesítve, ha a légzési és testtartási gyakorlatok automatikussá váltak."
+    },
+    "s3": {
+      "title": "Harmadik Fokozat",
+      "overview": "Tudni, akarni, merni, hallgatni – a mágia négy alappillére. Elemek légzése és életerő-kezelés.",
+      "spirit_title": "Mágikus Szellemiskolázás",
+      "spirit_summary": "Koncentráció több érzékkel egyszerre, tárgyakra, tájakra, élőlényekre.",
+      "spirit_mastery": "Teljesítve, ha nyitott szemmel is 5 percig vizualizálható bármely tárgy vagy jelenet.",
+      "soul_title": "Mágikus Lélekiskolázás",
+      "soul_summary": "Az elemek légzése az egész testben – a négy elem tudatos bevitele és megélése.",
+      "soul_mastery": "Teljesítve, ha az elemek hatása fizikailag is érezhető koncentráció nélkül.",
+      "body_title": "Mágikus Testiskolázás",
+      "body_summary": "Életerő-torlaszolás és biomagnetizmus alapjai.",
+      "body_mastery": "Teljesítve, ha az életerő saját testben irányítható és külső célokra is átvihető."
+    },
+    "s4": {
+      "title": "Negyedik Fokozat",
+      "overview": "Akasha-meditáció, elemek akkumulálása, asztrálérzékek fejlesztése.",
+      "spirit_title": "Mágikus Szellemiskolázás",
+      "spirit_summary": "Az Akasha-elv megértése, az üresség meditációja és a tudat kiterjesztése.",
+      "spirit_mastery": "Teljesítve, ha az Akasha-meditáció legalább 10 percig fenntartható mély állapotban.",
+      "soul_title": "Mágikus Lélekiskolázás",
+      "soul_summary": "Az elemek akkumulálása és kondenzálása a saját testben.",
+      "soul_mastery": "Teljesítve, ha mind a négy elem érezhető fizikai hatással tölthető be a testbe.",
+      "body_title": "Mágikus Testiskolázás",
+      "body_summary": "Asztrálérzékek (látás, hallás, érzés) fejlesztése finom módszerekkel.",
+      "body_mastery": "Teljesítve, ha az asztrális érzékek legalább alap szinten működnek."
+    },
+    "s5": {
+      "title": "Ötödik Fokozat",
+      "overview": "Az elemek külső akkumulálása, pneuma-mágia, mágikus segédeszközök.",
+      "spirit_title": "Mágikus Szellemiskolázás",
+      "spirit_summary": "Az elemek külső térben való sűrítése és szétoszlatása.",
+      "spirit_mastery": "Teljesítve, ha az elemek külső szobában is érzékelhetők mások számára.",
+      "soul_title": "Mágikus Lélekiskolázás",
+      "soul_summary": "Az asztrális érzékek mélyítése, klírszcencia és klírhallás fejlesztése.",
+      "soul_mastery": "Teljesítve, ha az asztrális látás elemi szinten elérhető médium nélkül.",
+      "body_title": "Mágikus Testiskolázás",
+      "body_summary": "Fény- és életerő-torlaszolás, telitomlás, személyes magnetizmus.",
+      "body_mastery": "Teljesítve, ha a magnetikus erő tárgyakra és személyekre alkalmazható."
+    },
+    "s6": {
+      "title": "Hatodik Fokozat",
+      "overview": "Mágikus fejlődés szintézise: asztrális utazás előkészítése, elem-mágia mélyítése.",
+      "spirit_title": "Mágikus Szellemiskolázás",
+      "spirit_summary": "Az asztrális utazás megalapozása, tudatáthelyezés práktikái.",
+      "spirit_mastery": "Teljesítve, ha a tudat ideiglenesen más tárgyba vagy lénybe helyezhető.",
+      "soul_title": "Mágikus Lélekiskolázás",
+      "soul_summary": "Elem-mágia az asztrális síkon, finom szellemi és lelki egyensúly.",
+      "soul_mastery": "Teljesítve, ha az asztrális sík saját jellemzői felismerhetők és kezelhetők.",
+      "body_title": "Mágikus Testiskolázás",
+      "body_summary": "Szobatelítés elemekkel, fénykoncentrátorok, személyes mágikus erőtér.",
+      "body_mastery": "Teljesítve, ha az erőtér érezhető mások által is."
+    },
+    "s7": {
+      "title": "Hetedik Fokozat",
+      "overview": "Mágikus levél, fluid-kondenzátorok, jövőbelátás és asztrális utazás.",
+      "spirit_title": "Mágikus Szellemiskolázás",
+      "spirit_summary": "Mágikus levél és folyékony kondenzátorok készítése, asztrális látás mélyítése.",
+      "spirit_mastery": "Teljesítve, ha a mágikus segédeszközök célirányosan és megbízhatóan működnek.",
+      "soul_title": "Mágikus Lélekiskolázás",
+      "soul_summary": "Asztrális utazás tudatos megvalósítása, az asztrális test irányítása.",
+      "soul_mastery": "Teljesítve, ha az asztrális test a fizikaitól különállóan működtethető.",
+      "body_title": "Mágikus Testiskolázás",
+      "body_summary": "Folyékony kondenzátorok készítése és alkalmazása, asztrális érzékek erősítése.",
+      "body_mastery": "Teljesítve, ha a kondenzátorok érezhető hatással alkalmazhatók."
+    },
+    "s8": {
+      "title": "Nyolcadik Fokozat",
+      "overview": "Szellemi lények megidézése, mágikus segédek, orákulumok és jövendölés.",
+      "spirit_title": "Mágikus Szellemiskolázás",
+      "spirit_summary": "Szellemi lények tudatos megidézése és kommunikáció velük.",
+      "spirit_mastery": "Teljesítve, ha megbízható kétirányú kommunikáció létesíthető szellemi lényekkel.",
+      "soul_title": "Mágikus Lélekiskolázás",
+      "soul_summary": "Finom szellemi érzékelés: intuíció, szimbolikus látás, orákulumok.",
+      "soul_mastery": "Teljesítve, ha az intuíció megbízhatóan alkalmazható fontos döntéseknél.",
+      "body_title": "Mágikus Testiskolázás",
+      "body_summary": "Szellemi befolyás a fizikai síkra, erőtér-munkák és védelmi mágikus módszerek.",
+      "body_mastery": "Teljesítve, ha a szellemi erő fizikai hatásai megbízhatóan megvalósíthatók."
+    },
+    "s9": {
+      "title": "Kilencedik Fokozat",
+      "overview": "A mágikus erők teljes integrációja, kabbalisztikus módszerek.",
+      "spirit_title": "Mágikus Szellemiskolázás",
+      "spirit_summary": "Kabbalisztikus módszerek, isteni nevek és betűk mágikus alkalmazása.",
+      "spirit_mastery": "Teljesítve, ha a kabbalisztikus erők tudatosan és célirányosan alkalmazhatók.",
+      "soul_title": "Mágikus Lélekiskolázás",
+      "soul_summary": "A lélek teljes egyensúlya és integrációja minden síkon.",
+      "soul_mastery": "Teljesítve, ha minden elem harmonikusan egyensúlyban van a lélekben.",
+      "body_title": "Mágikus Testiskolázás",
+      "body_summary": "A test mint mágikus eszköz tökéletesítése, fizikai erők maximális használata.",
+      "body_mastery": "Teljesítve, ha a test mint tökéletes mágikus eszköz működik minden körülményben."
+    },
+    "s10": {
+      "title": "Tizedik Fokozat",
+      "overview": "A beavatás teljessége: adeptusság, a négy világ mágikus uralma.",
+      "spirit_title": "Mágikus Szellemiskolázás",
+      "spirit_summary": "Az adeptusság teljes mágikus tudása és alkalmazása a legmagasabb szinteken.",
+      "spirit_mastery": "Teljesítve, ha minden mágikus törvény és erő teljesen az akarat uralma alatt áll.",
+      "soul_title": "Mágikus Lélekiskolázás",
+      "soul_summary": "A lélek tökéletessége, az isteni szikra tudatos megélése.",
+      "soul_mastery": "Teljesítve, ha az isteni és emberi természet teljesen integrált.",
+      "body_title": "Mágikus Testiskolázás",
+      "body_summary": "A test teljes szellemi-lelki-fizikai integrációja és a beavatás pecsétje.",
+      "body_mastery": "Teljesítve, ha a teljes beavatás minden aspektusa megvalósult."
+    }
+  },
+  "practices": {
+    "s1_spirit_observe": {
+      "title": "Gondolatok megfigyelése",
+      "description": "Ülj kényelmesen egy széken vagy feküdj le. Lazítsd el teljesen a tested, hunyd be szemed. Passzív megfigyelőként kövesd gondolataid áramlását 5-10 percen át – ne avatkozz bele, csak figyelj semleges távolságból."
+    },
+    "s1_spirit_control": {
+      "title": "Gondolatfegyelmezés",
+      "description": "Válassz egyetlen gondolatot és tartsd meg teljes erejeddel. Minden betolakodó gondolatot energikusan utasíts el. Naponta 1 perccel növeld az időt, míg 10 percig képes vagy egyetlen gondolatot tartani."
+    },
+    "s1_spirit_emptiness": {
+      "title": "Teljes gondolatüresség",
+      "description": "Feküdj le vagy ülj kényelmesen. Lazítsd el teljesen a tested. Minden felmerülő gondolatot energikusan utasíts el. Cél: 10 perc teljes szellemi csend, elalvás nélkül."
+    },
+    "s1_spirit_journal": {
+      "title": "Mágikus napló + önkritika",
+      "description": "Este rögzítsd a napi eredményeket, sikereket és kudarcokat, időtartamokat. Készíts tervet a következő napra. Gyakorolj önkritikát ítélkezés nélkül – légy magaddal szigorú, de igazságos."
+    },
+    "s1_soul_introspection": {
+      "title": "Introspekció – önmegismerés",
+      "description": "Kutatd fel lelked minden gyengeségét, hibáját és szenvedélyét. Légy szigorú és teljesen őszinte. Írj le mindent – semmi sem maradhat elrejtve. Ez a lelki tükör alapja."
+    },
+    "s1_soul_mirror_negative": {
+      "title": "Fekete lelki tükör",
+      "description": "Rendszerezd feltárt hibáidat a négy elem (Tűz/Víz/Levegő/Föld) szerint, három erőségi szintre: 1=legdurvább és leggyakoribb, 2=közepes intenzitású, 3=csak ritkán megjelenő gyengeség."
+    },
+    "s1_soul_mirror_positive": {
+      "title": "Fehér lelki tükör",
+      "description": "Ugyanígy rendszerezd jó tulajdonságaidat, erőidet és erényeidet. Ugyanaz a négy elem és három szint. Legyél ugyanolyan alapos mint a fekete tükörnél."
+    },
+    "s1_body_morning": {
+      "title": "Reggeli test-ébresztő rutin",
+      "description": "Felkelés után: száraz kefézés az egész testen bőrpírulásig, majd hideg vizes mosdás és frottírozás. Rövid reggeli torna a hajlékonyságért és a vérkeringés serkentéséért."
+    },
+    "s1_body_breathing": {
+      "title": "Tudatos kívánság-légzés",
+      "description": "Ülve, ellazulva: belélegzéskor képzeld el, hogy a levegővel együtt a kívánt tulajdonság (egészség, béke, erő) is behatol testedbe. Kezdd 7 lélegzettel, naponta eggyel növeld."
+    },
+    "s1_body_eating": {
+      "title": "Tudatos táplálékfelvétel",
+      "description": "Étkezés előtt összpontosíts egy kívánságra. Képzeld el, hogy az étellel együtt a kívánságod is testteddé válik. Lassan, tudatosan egyél, zavaró hatások nélkül."
+    },
+    "s1_body_water": {
+      "title": "Vízmágia",
+      "description": "Minden kézmosásnál képzeld el, hogy a vízzel együtt gyengeségeidet is lemosod. A lefolyó vízzel azok eltávoznak. Opcionálisan: kívánsággal telített vízben fürödj."
+    },
+    "s2_spirit_concentration": {
+      "title": "Koncentráció élő tárgyakra",
+      "description": "Helyezz magad elé egy tárgyat (gyertyaláng, virág, kő). Hunyd be a szemed és idézd elő plasztikusan a képét, majd nyisd ki a szemed. Cél: 5-10 percig zavartalanul megtartani a képet csukott szemmel."
+    },
+    "s2_spirit_multi_sense": {
+      "title": "Több érzékkel való koncentráció",
+      "description": "Képzelj el egy tárgyat, és egyidejűleg idézd fel annak látványát, hangját és tapintását is. Fokozatosan adj hozzá érzékszervi részleteket, és tartsd fenn az élményt minél hosszabb ideig."
+    },
+    "s2_soul_balance": {
+      "title": "Asztrál-mágikus egyensúly",
+      "description": "Vizsgáld meg lelkedben az elemek egyensúlyát a korábban elkészített tükör alapján. Tervezz tudatos lépéseket a legsúlyosabb gyengeségek csökkentéséhez, és dolgozz rajtuk naponta."
+    },
+    "s2_soul_character": {
+      "title": "Jellemnemesítés",
+      "description": "Válassz ki egy negatív tulajdonságot a fekete tükörből. Naponta több alkalommal, ahol ez a gyengeség megjelenne, tudatosan az ellentétes erényt alkalmazd. Vezess feljegyzéseket a haladásról."
+    },
+    "s2_body_breathing": {
+      "title": "Tudatos póruslégzés",
+      "description": "Ülj kényelmesen. Képzeld el, hogy nemcsak a tüdőddel, hanem az egész bőrfelületed minden pórusán át is lélegzik a tested. Érezd, hogy az életenergia minden irányból beáramlik."
+    },
+    "s2_body_posture": {
+      "title": "Tudatos testtartás",
+      "description": "Figyelj napközben a testtartásodra. Álj, ülj, járj tudatosan, egyenesen. A test tartása visszahat a lélekre és a szellemre – a méltóságos testtartás erőt és bizalmat sugároz."
+    },
+    "s3_spirit_multi": {
+      "title": "Többérzékes koncentráció",
+      "description": "Képzelj el egy tárgyat (pl. égő gyertya), és tartsd fenn egyszerre a látványát, hangját (sistergés, pattogás) és melegét. Cél: 5 percig mindhárom érzékkel egyszerre tudni koncentrálni."
+    },
+    "s3_spirit_landscape": {
+      "title": "Tájak és helyszínek vizualizációja",
+      "description": "Képzelj el egy ismert tájat vagy szobát minden részletével. A vizualizáció legyen olyan élénk, mintha valóban ott lennél. Próbáld meg nyitott szemmel is megtartani a képet."
+    },
+    "s3_soul_elements": {
+      "title": "Elemlégzés az egész testben",
+      "description": "Tüdőlégzéssel és elképzelt póruslégzéssel vond be az adott elemet (Tűz, Víz, Levegő, Föld) az egész testedbe. Érezd a jellegzetes hatását: hő, hideg, könnyedség, nehézség. Majd oszlasd szét."
+    },
+    "s3_body_vitality": {
+      "title": "Életerő-torlaszolás",
+      "description": "Lélegezz be életenergiát az egész testeddel. Sűrítsd össze a szívtájékon vagy a plexus solarison, majd irányítsd egy adott testrészre vagy külső célra. Légzéssel fokozd az erőt, majd oldozd fel."
+    },
+    "s4_spirit_akasha": {
+      "title": "Akasha-meditáció",
+      "description": "Üljön kényelmesen és szemlélje belső üressége végtelen terét. Az Akasha az összes elem előtti állapot – az örökkévalóság, mindenütt-jelenvalóság érzése. Próbálj ebbe az ürességbe merülni."
+    },
+    "s4_soul_accumulation": {
+      "title": "Elemek akkumulálása",
+      "description": "Válassz egy elemet, és sűrítsd be a tested egy részébe (pl. tenyér, gyomor). Érezzed fizikailag a hatást: tűznél hő, víznél hidegség, levegőnél könnyedség, földnél nehézség. Aztán oszlasd szét."
+    },
+    "s4_body_astral_senses": {
+      "title": "Asztrális érzékek fejlesztése",
+      "description": "Készítsd elő az asztrális látás alapjait: csukott szemmel képzelj el fényt, majd próbálj valódi asztrális jelenségeket észlelni. Fokozottan figyelj a belső érzékelési folyamatokra."
+    },
+    "s5_spirit_external": {
+      "title": "Elemek külső felhalmozása",
+      "description": "Sűrítsd az elemet nemcsak a saját testedbe, hanem a szobatérbe is. Képzeld el, hogy a szoba telítődik a kiválasztott elem energiájával. Érezd és figyeld a hatást, majd oldozd fel."
+    },
+    "s5_soul_clairvoyance": {
+      "title": "Klírlátás fejlesztése",
+      "description": "Gyakorold az asztrális látást folyékony kondenzátor segítségével (szem borogatása), majd anélkül is. Kíséreld meg közel és távolban lévő dolgokat 'látni' asztrális szemeddel."
+    },
+    "s5_body_magnetism": {
+      "title": "Személyes magnetizmus",
+      "description": "Telítsd testedet életerővel és élénk fénnyel képzeletedben. Érezd, hogyan árad ki belőled ez a mágneses erő. Gyakorold tárgyak és személyek kezelését ezzel az energiával."
+    },
+    "s6_spirit_projection": {
+      "title": "Tudatáthelyezés",
+      "description": "Képzeld el, hogy tudatod kilép testédből és egy tárgyba vagy egy állat testébe kerül. Éld át a másik lény érzékelését. Ez az asztrális utazás előgyakorlata – fokozatosan mélyítsd."
+    },
+    "s6_soul_astral_balance": {
+      "title": "Asztrális síkon való egyensúly",
+      "description": "Mélyíts el az elem-mágiát az asztrális síkon. Vizsgáld meg asztrális tested egyensúlyát és állapotát. Dolgozz a lelki finomítás magasabb szintjein, az asztrális szféra törvényeivel összhangban."
+    },
+    "s6_body_room_charging": {
+      "title": "Szobatelítés elemekkel",
+      "description": "Töltsd meg az egész szobát az általad kívánt elemmel vagy életenergiával. Célod lehet gyógyítás, védelem, ihletettség. Érezd, ahogyan a tér megváltozik – ha mások is érzékelik, jó jel."
+    },
+    "s7_spirit_letter": {
+      "title": "Mágikus levél és kondenzátorok",
+      "description": "Készítsd el az első saját folyékony kondenzátorodat. Töltsd meg kívánsággal, célzott szándékkal. Tanulmányozd az asztrális látás fokozatos mélyítését ezek segítségével."
+    },
+    "s7_soul_astral_travel": {
+      "title": "Asztrális utazás",
+      "description": "Tudatosan engedd ki asztrális tested a fizikaistól. Látogass el előre elhatározott helyszínekre asztrális testedben. Visszatérés után rögzítsd naplóban az élményeket részletesen."
+    },
+    "s7_body_condensers": {
+      "title": "Folyékony kondenzátorok alkalmazása",
+      "description": "Alkalmazd az elkészített kondenzátorokat az asztrális érzékek erősítésére. Borogasd szemeidet az anyaggal és figyelj belső élményeidre. Gyakorolj rendszeresen."
+    },
+    "s8_spirit_beings": {
+      "title": "Szellemi lények megidézése",
+      "description": "Kíséreld meg tudatosan kommunikálni szellemi lényekkel asztrális síkon. Légy óvatos és megkülönböztető: nem minden megjelenő szellem jóakaratú. Kérj jeleket, tesztelj."
+    },
+    "s8_soul_intuition": {
+      "title": "Intuíció és orákulumok",
+      "description": "Mélyítsd el intuitív képességeidet szimbolikus látáson és jövendölésen keresztül. Kíséreld meg jövőbeli eseményeket megérezni meditációban, majd verifikiáld az eredményeket."
+    },
+    "s8_body_influence": {
+      "title": "Szellemi befolyás a fizikai síkra",
+      "description": "Alkalmazd mágikus erődet fizikai gyógyításra, védelemre és pozitív befolyásolásra. Tanulmányozd a korlátokat és etikai szabályokat. A tudás hatalommal jár, felelősséggel együtt."
+    },
+    "s9_spirit_kabbalah": {
+      "title": "Kabbalisztikus módszerek",
+      "description": "Dolgozz az isteni nevekkel és betűkkel, azok rezgéseivel és mágikus erejével. Mélyítsd el a tetragrammaton és más kabbalisztikus formulák gyakorlati alkalmazását."
+    },
+    "s9_soul_integration": {
+      "title": "Teljes lelki integráció",
+      "description": "Mélyíts el minden eddigi lelki munkát. Törekedj a négy elem teljes egyensúlyára lelkedben. Vizsgáld meg és finomítsd a tükröt – most sokkal mélyebb szinten, mint az első fokozatban."
+    },
+    "s9_body_mastery": {
+      "title": "Test mint mágikus eszköz",
+      "description": "A test teljes szellemi-lelki uralma. Minden mágikus képesség a fizikai testen keresztül is szabadon áramlik. A test egészséges, rugalmas és tökéletes eszköze a szellemnek."
+    },
+    "s10_spirit_adept": {
+      "title": "Adeptusság – teljes szellemi tudás",
+      "description": "Minden tanult elv, törvény és erő szintézise. Az adeptus szabadon mozog a négy világ szintjén, ismeri azok törvényeit és ura azoknak. Ez a tizedik fokozat szellemi célja."
+    },
+    "s10_soul_divine": {
+      "title": "Az isteni szikra megélése",
+      "description": "A lélek tökéletessége: az isteni természet és az emberi természet teljes integrációja. Az adeptus tudja, honnan jött, hol tart és merre vezet útja. Az isteni szeretet az alap."
+    },
+    "s10_body_seal": {
+      "title": "A beavatás pecsétje",
+      "description": "A test, a lélek és a szellem tökéletes összhangja – ez a beavatás pecsétje. Minden kapu nyitva van, minden lehetőség megvalósítható. Ez nem végpont, hanem új kezdet."
+    }
+  }
+}
