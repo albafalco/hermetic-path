@@ -16,24 +16,60 @@ function MeditationTimer({ practice, onComplete }: { practice: Practice; onCompl
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const startTimeRef = useRef<number>(0);
   const elapsedRef = useRef<number>(0);
+  // AudioContext létrehozása user-gesture-nél (mobilon kötelező)
+  const audioCtxRef = useRef<AudioContext | null>(null);
 
-  const durations = [5, 10, 15, 20, 30].filter(d => d >= practice.durationMin && (practice.durationMax === 0 || d <= practice.durationMax));
+  const durations = [5, 10, 15, 20, 30].filter(d =>
+    d >= practice.durationMin && (practice.durationMax === 0 || d <= practice.durationMax)
+  );
   if (durations.length === 0) durations.push(practice.durationMin || 10);
+
+  function unlockAudio() {
+    try {
+      const AC = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+      if (!audioCtxRef.current) {
+        audioCtxRef.current = new AC();
+      }
+      if (audioCtxRef.current.state === 'suspended') {
+        audioCtxRef.current.resume();
+      }
+    } catch {}
+  }
 
   function playBell() {
     try {
-      const AudioContext = window.AudioContext || (window as unknown as { webkitAudioContext: typeof window.AudioContext }).webkitAudioContext;
-      const ctx = new AudioContext();
-      const oscillator = ctx.createOscillator();
-      const gainNode = ctx.createGain();
-      oscillator.connect(gainNode);
-      gainNode.connect(ctx.destination);
-      oscillator.frequency.setValueAtTime(528, ctx.currentTime);
-      oscillator.frequency.exponentialRampToValueAtTime(396, ctx.currentTime + 2);
-      gainNode.gain.setValueAtTime(0.3, ctx.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 3);
-      oscillator.start(ctx.currentTime);
-      oscillator.stop(ctx.currentTime + 3);
+      const ctx = audioCtxRef.current;
+      if (!ctx) return;
+      // Ha még suspended, próbáljuk resumelni
+      if (ctx.state === 'suspended') ctx.resume();
+
+      // Harangszerű hang: két oszcillátor
+      const osc1 = ctx.createOscillator();
+      const osc2 = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc1.connect(gain);
+      osc2.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc1.type = 'sine';
+      osc2.type = 'sine';
+      osc1.frequency.setValueAtTime(528, ctx.currentTime);
+      osc1.frequency.exponentialRampToValueAtTime(264, ctx.currentTime + 2.5);
+      osc2.frequency.setValueAtTime(792, ctx.currentTime);
+      osc2.frequency.exponentialRampToValueAtTime(396, ctx.currentTime + 2);
+
+      gain.gain.setValueAtTime(0, ctx.currentTime);
+      gain.gain.linearRampToValueAtTime(0.4, ctx.currentTime + 0.05);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 4);
+
+      osc1.start(ctx.currentTime);
+      osc2.start(ctx.currentTime);
+      osc1.stop(ctx.currentTime + 4);
+      osc2.stop(ctx.currentTime + 4);
+
+      // Vibráció mobilon
+      if (navigator.vibrate) navigator.vibrate([200, 100, 200, 100, 400]);
     } catch {}
   }
 
@@ -47,6 +83,7 @@ function MeditationTimer({ practice, onComplete }: { practice: Practice; onCompl
       playBell();
       if (intervalRef.current) clearInterval(intervalRef.current);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [totalSeconds]);
 
   useEffect(() => {
@@ -62,14 +99,22 @@ function MeditationTimer({ practice, onComplete }: { practice: Practice; onCompl
     return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
   }, [running, tick]);
 
-  function handleStart() { setRunning(true); }
-  function handlePause() { setRunning(false); }
+  function handleStart() {
+    unlockAudio(); // user gesture → AudioContext feloldása
+    setRunning(true);
+  }
+
+  function handlePause() {
+    setRunning(false);
+  }
+
   function handleReset() {
     setRunning(false);
     setFinished(false);
     elapsedRef.current = 0;
     setRemaining(totalSeconds);
   }
+
   function handleDurationChange(mins: number) {
     const secs = mins * 60;
     setTotalSeconds(secs);
@@ -94,7 +139,8 @@ function MeditationTimer({ practice, onComplete }: { practice: Practice; onCompl
           <circle cx="100" cy="100" r={radius} fill="none" stroke="rgba(201,168,76,0.1)" strokeWidth="8"/>
           <circle
             cx="100" cy="100" r={radius}
-            fill="none" stroke={finished ? 'var(--body-track)' : 'var(--gold-primary)'}
+            fill="none"
+            stroke={finished ? 'var(--body-track)' : 'var(--gold-primary)'}
             strokeWidth="8"
             strokeLinecap="round"
             strokeDasharray={circumference}
@@ -107,13 +153,17 @@ function MeditationTimer({ practice, onComplete }: { practice: Practice; onCompl
           <span className="font-cinzel text-4xl" style={{ color: finished ? 'var(--body-track)' : 'var(--text-primary)' }}>
             {String(mins).padStart(2, '0')}:{String(secs).padStart(2, '0')}
           </span>
-          {finished && <span className="font-crimson text-sm mt-1" style={{ color: 'var(--body-track)' }}>{t('completed')}</span>}
+          {finished && (
+            <span className="font-crimson text-sm mt-1" style={{ color: 'var(--body-track)' }}>
+              {t('completed')}
+            </span>
+          )}
         </div>
       </div>
 
       {/* Duration selector */}
       {!running && !finished && (
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap justify-center">
           {durations.map(d => (
             <button key={d} onClick={() => handleDurationChange(d)}
               className="px-3 py-1.5 rounded font-crimson text-sm transition-all"
@@ -130,7 +180,7 @@ function MeditationTimer({ practice, onComplete }: { practice: Practice; onCompl
 
       {/* Controls */}
       <div className="flex gap-3">
-        {!finished && (
+        {!finished ? (
           <>
             {!running ? (
               <button onClick={handleStart}
@@ -151,9 +201,8 @@ function MeditationTimer({ practice, onComplete }: { practice: Practice; onCompl
               {t('reset')}
             </button>
           </>
-        )}
-        {finished && (
-          <button onClick={() => onComplete(totalSeconds - remaining || totalSeconds)}
+        ) : (
+          <button onClick={() => onComplete(totalSeconds)}
             className="px-8 py-3 rounded-lg font-cinzel transition-all"
             style={{ background: 'linear-gradient(135deg, var(--body-track), #5a9c56)', color: 'white' }}>
             {t('markDone')}
@@ -173,7 +222,9 @@ export default function PracticePage() {
   const [todayLogs, setTodayLogs] = useState<DailyLog[]>([]);
   const [selectedPractice, setSelectedPractice] = useState<Practice | null>(null);
   const [saved, setSaved] = useState<string>('');
+  const [saveError, setSaveError] = useState<string>('');
   const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
     loadData();
@@ -194,33 +245,59 @@ export default function PracticePage() {
   }
 
   async function markComplete(practice: Practice, durationSec: number) {
-    const supabase = createClient();
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) return;
+    if (saving) return;
+    setSaving(true);
+    setSaveError('');
 
-    const today = new Date().toISOString().split('T')[0];
-    const activeStep = stepProgress.find(p => p.status === 'active');
-    const currentStep = STEPS.find(s => s.number === (activeStep?.step_number || 1));
-    const track = currentStep?.tracks.find(tr => tr.practices.some(p => p.key === practice.key));
+    try {
+      const supabase = createClient();
+      const { data: { user }, error: userError } = await supabase.auth.getUser();
 
-    await supabase.from('daily_logs').upsert({
-      user_id: user.id,
-      log_date: today,
-      step_number: activeStep?.step_number || 1,
-      track: track?.track || 'spirit',
-      practice_key: practice.key,
-      completed: true,
-      duration_sec: durationSec,
-    }, { onConflict: 'user_id,log_date,practice_key' });
+      if (userError || !user) {
+        setSaveError('Nincs bejelentkezve. Kérjük, lépj be újra.');
+        setSaving(false);
+        return;
+      }
 
-    setSaved(practice.key);
-    setSelectedPractice(null);
-    setTimeout(() => setSaved(''), 3000);
-    loadData();
+      const today = new Date().toISOString().split('T')[0];
+      const activeStep = stepProgress.find(p => p.status === 'active');
+      const stepNumber = activeStep?.step_number ?? 1;
+      const currentStep = STEPS.find(s => s.number === stepNumber);
+      const trackObj = currentStep?.tracks.find(tr => tr.practices.some(p => p.key === practice.key));
+      const track = trackObj?.track ?? 'spirit';
+
+      const { error } = await supabase.from('daily_logs').upsert(
+        {
+          user_id: user.id,
+          log_date: today,
+          step_number: stepNumber,
+          track,
+          practice_key: practice.key,
+          completed: true,
+          duration_sec: durationSec,
+        },
+        { onConflict: 'user_id,log_date,practice_key' }
+      );
+
+      if (error) {
+        setSaveError(`Mentési hiba: ${error.message}`);
+        setSaving(false);
+        return;
+      }
+
+      setSaved(practice.key);
+      setSelectedPractice(null);
+      setTimeout(() => setSaved(''), 3000);
+      await loadData();
+    } catch (err) {
+      setSaveError(`Váratlan hiba: ${err}`);
+    } finally {
+      setSaving(false);
+    }
   }
 
   const activeStep = stepProgress.find(p => p.status === 'active');
-  const currentStep = STEPS.find(s => s.number === (activeStep?.step_number || 1));
+  const currentStep = STEPS.find(s => s.number === (activeStep?.step_number ?? 1));
 
   if (loading) {
     return (
@@ -233,10 +310,21 @@ export default function PracticePage() {
   if (selectedPractice) {
     return (
       <div className="p-4 md:p-8 max-w-2xl mx-auto">
-        <button onClick={() => setSelectedPractice(null)} className="flex items-center gap-2 mb-6 font-crimson text-sm" style={{ color: 'var(--text-secondary)' }}>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4"><polyline points="15 18 9 12 15 6"/></svg>
+        <button onClick={() => setSelectedPractice(null)}
+          className="flex items-center gap-2 mb-6 font-crimson text-sm"
+          style={{ color: 'var(--text-secondary)' }}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
           {t('common.back')}
         </button>
+
+        {saveError && (
+          <div className="mb-4 p-3 rounded-lg font-crimson text-sm"
+            style={{ background: 'rgba(232,93,58,0.1)', color: 'var(--fire)', border: '1px solid rgba(232,93,58,0.3)' }}>
+            {saveError}
+          </div>
+        )}
 
         <div className="card-glass p-6 mb-6">
           <h2 className="font-cinzel text-xl mb-3" style={{ color: 'var(--gold-primary)' }}>
@@ -249,14 +337,22 @@ export default function PracticePage() {
 
         {selectedPractice.timerRequired ? (
           <div className="card-glass p-8 flex justify-center">
-            <MeditationTimer practice={selectedPractice} onComplete={(secs) => markComplete(selectedPractice, secs)} />
+            <MeditationTimer
+              practice={selectedPractice}
+              onComplete={(secs) => markComplete(selectedPractice, secs)}
+            />
           </div>
         ) : (
           <div className="card-glass p-6 text-center">
-            <button onClick={() => markComplete(selectedPractice, 0)}
+            <p className="font-crimson mb-6" style={{ color: 'var(--text-secondary)' }}>
+              Elvégezted ezt a gyakorlatot?
+            </p>
+            <button
+              onClick={() => markComplete(selectedPractice, 0)}
+              disabled={saving}
               className="px-8 py-3 rounded-lg font-cinzel"
-              style={{ background: 'linear-gradient(135deg, var(--gold-primary), var(--gold-dim))', color: 'var(--bg-primary)' }}>
-              {t('practice.markDone')}
+              style={{ background: 'linear-gradient(135deg, var(--gold-primary), var(--gold-dim))', color: 'var(--bg-primary)', opacity: saving ? 0.6 : 1 }}>
+              {saving ? 'Mentés...' : t('practice.markDone')}
             </button>
           </div>
         )}
@@ -270,14 +366,15 @@ export default function PracticePage() {
         <h1 className="text-3xl font-cinzel" style={{ color: 'var(--gold-primary)' }}>{t('practice.title')}</h1>
         {currentStep && (
           <p className="mt-2 font-crimson" style={{ color: 'var(--text-secondary)' }}>
-            {t('steps.step', { number: activeStep?.step_number || 1 })}
+            {t('steps.step', { number: activeStep?.step_number ?? 1 })}
           </p>
         )}
       </div>
 
       {saved && (
-        <div className="mb-4 p-3 rounded-lg font-crimson text-sm" style={{ background: 'rgba(126, 184, 122, 0.1)', color: 'var(--body-track)', border: '1px solid rgba(126, 184, 122, 0.3)' }}>
-          {t('practice.sessionSaved')}
+        <div className="mb-4 p-3 rounded-lg font-crimson text-sm"
+          style={{ background: 'rgba(126,184,122,0.1)', color: 'var(--body-track)', border: '1px solid rgba(126,184,122,0.3)' }}>
+          ✓ {t('practice.sessionSaved')}
         </div>
       )}
 
@@ -293,15 +390,23 @@ export default function PracticePage() {
                   const done = todayLogs.some(l => l.practice_key === practice.key && l.completed);
                   return (
                     <div key={practice.key}
-                      className="card-glass p-5 cursor-pointer transition-all"
-                      style={{ borderColor: done ? trackColor(track.track) + '40' : 'var(--border)', opacity: done ? 0.7 : 1 }}
+                      className="card-glass p-5 transition-all"
+                      style={{
+                        borderColor: done ? trackColor(track.track) + '40' : 'var(--border)',
+                        opacity: done ? 0.7 : 1,
+                        cursor: done ? 'default' : 'pointer',
+                      }}
                       onClick={() => !done && setSelectedPractice(practice)}>
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3">
                           <div className="w-6 h-6 rounded-full border flex items-center justify-center flex-shrink-0 mt-0.5"
-                            style={{ borderColor: done ? trackColor(track.track) : 'var(--border)', background: done ? trackColor(track.track) + '20' : 'transparent' }}>
+                            style={{
+                              borderColor: done ? trackColor(track.track) : 'var(--border)',
+                              background: done ? trackColor(track.track) + '20' : 'transparent',
+                            }}>
                             {done && (
-                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-3 h-3" style={{ color: trackColor(track.track) }}>
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-3 h-3"
+                                style={{ color: trackColor(track.track) }}>
                                 <polyline points="20 6 9 17 4 12"/>
                               </svg>
                             )}
@@ -312,13 +417,14 @@ export default function PracticePage() {
                             </h3>
                             <p className="font-crimson text-sm mt-1" style={{ color: 'var(--text-muted)' }}>
                               {t(`practice.frequency.${practice.frequency}`)}
-                              {practice.durationMin > 0 && ` · ${practice.durationMin}-${practice.durationMax} perc`}
+                              {practice.durationMin > 0 && ` · ${practice.durationMin}${practice.durationMax > practice.durationMin ? `–${practice.durationMax}` : ''} perc`}
                               {practice.timerRequired && ' · ⏱'}
                             </p>
                           </div>
                         </div>
                         {!done && (
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 flex-shrink-0" style={{ color: 'var(--text-muted)' }}>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 flex-shrink-0"
+                            style={{ color: 'var(--text-muted)' }}>
                             <polyline points="9 18 15 12 9 6"/>
                           </svg>
                         )}
@@ -332,7 +438,9 @@ export default function PracticePage() {
         </div>
       ) : (
         <div className="card-glass p-12 text-center">
-          <p className="font-crimson text-lg" style={{ color: 'var(--text-secondary)' }}>{t('dashboard.noActivePractice')}</p>
+          <p className="font-crimson text-lg" style={{ color: 'var(--text-secondary)' }}>
+            {t('dashboard.noActivePractice')}
+          </p>
         </div>
       )}
     </div>
