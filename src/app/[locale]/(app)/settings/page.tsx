@@ -44,6 +44,57 @@ function Toggle({ checked, onChange, disabled }: { checked: boolean; onChange: (
   );
 }
 
+function TestNotificationButton() {
+  const [testing, setTesting] = useState(false);
+  const [result, setResult] = useState('');
+
+  async function handleTest() {
+    setTesting(true);
+    setResult('');
+    try {
+      const res = await fetch('/api/push/test', { method: 'POST' });
+      const data = await res.json();
+      if (res.ok) {
+        setResult('✓ Teszt értesítés elküldve! Hamarosan meg kell jelennie.');
+      } else {
+        setResult(`✗ ${data.error}`);
+      }
+    } catch {
+      setResult('✗ Hálózati hiba.');
+    }
+    setTesting(false);
+    setTimeout(() => setResult(''), 6000);
+  }
+
+  return (
+    <div className="card-glass p-4 flex flex-col gap-3">
+      <div>
+        <h3 className="font-cinzel text-sm" style={{ color: 'var(--text-primary)' }}>Értesítés tesztelése</h3>
+        <p className="font-crimson text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>
+          Küld egy azonnali teszt értesítést, hogy ellenőrizd működik-e
+        </p>
+      </div>
+      <button
+        onClick={handleTest}
+        disabled={testing}
+        className="self-start px-5 py-2 rounded-lg font-cinzel text-sm transition-all"
+        style={{
+          background: 'rgba(201,168,76,0.15)',
+          border: '1px solid var(--gold-primary)',
+          color: 'var(--gold-primary)',
+          opacity: testing ? 0.6 : 1,
+        }}>
+        {testing ? 'Küldés...' : 'Teszt értesítés'}
+      </button>
+      {result && (
+        <p className="font-crimson text-sm" style={{ color: result.startsWith('✓') ? 'var(--body-track)' : 'var(--fire)' }}>
+          {result}
+        </p>
+      )}
+    </div>
+  );
+}
+
 export default function SettingsPage() {
   const [settings, setSettings] = useState<NotificationSettings>(defaultSettings);
   const [permissionState, setPermissionState] = useState<NotificationPermission>('default');
@@ -343,11 +394,14 @@ export default function SettingsPage() {
             )}
           </div>
 
+          {/* Test notification */}
+          <TestNotificationButton />
+
           {/* Info box */}
           <div className="p-4 rounded-lg font-crimson text-sm"
             style={{ background: 'rgba(201,168,76,0.05)', border: '1px solid rgba(201,168,76,0.2)', color: 'var(--text-secondary)' }}>
             <p className="font-cinzel text-xs mb-2" style={{ color: 'var(--gold-dim)' }}>HOGYAN MŰKÖDIK</p>
-            <p>Az értesítések a beállított időpont közelében érkeznek, ha a megfelelő gyakorlat még nem lett elvégezve arra a napra. A reggeli értesítés kb. 06:00 UTC (08:00 Budapest nyáron), az esti kb. 17:00 UTC (19:00 Budapest nyáron) körül ellenőriz.</p>
+            <p>Az értesítések naponta kétszer ellenőrzik, hogy a megfelelő gyakorlat elvégezve van-e. A reggeli ellenőrzés kb. 08:00-kor (Budapest), az esti kb. 19:00-kor fut. Csak akkor küld értesítést, ha a gyakorlat még nem lett elvégezve aznap.</p>
           </div>
         </div>
       )}
